@@ -13,17 +13,17 @@ import dotenv
 dotenv.load_dotenv()
 
 
-# class Error(BaseModel):
-#     before: str
-#     after: str
-#     explanation: str
+class Error(BaseModel):
+    before: str
+    after: str
+    explanation: str
 
 
-# class Grammar(BaseModel):
-#     spelling: list[Error]
-#     punctuation: list[Error]
-#     grammar: list[Error]
-#     corrected: str
+class Grammar(BaseModel):
+    spelling: list[Error]
+    punctuation: list[Error]
+    grammar: list[Error]
+    corrected: str
 
 
 console = Console()
