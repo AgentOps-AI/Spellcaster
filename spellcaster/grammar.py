@@ -1,5 +1,4 @@
-import instructor
-from anthropic import Anthropic
+import json
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from rich.console import Console
@@ -10,7 +9,8 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 from rich.box import ROUNDED
-
+from groq import Groq
+import os
 
 load_dotenv()
 
@@ -25,7 +25,10 @@ class Grammar(BaseModel):
     grammar: list[Error]
     corrected: str
 
-client = instructor.from_anthropic(Anthropic())
+client = Groq(
+    api_key=os.environ.get("GROQ_API_KEY"),
+)
+
 console = Console()
 
 def read_file(file_path: str) -> str:
@@ -55,28 +58,32 @@ def create_prompt(text: str) -> str:
     In the response:
     - For 'spelling', 'punctuation', and 'grammar' keys: Provide only changed items with original text, corrected text, and explanation.
     - For 'corrected' key: Provide the full corrected text with all errors addressed.
-
-    Do not include correct sentences or punctuations or unchanged text in the error lists. 
-
+    
     {text}
     """
 
 def check_grammar_with_claude(file_path: str) -> Grammar:
     """Check grammar of the text in the provided file using Claude."""
     text = read_file(file_path)
-    resp = client.messages.create(
-        model="claude-3-5-sonnet-20240620",
-        max_tokens=8192,
+
+    resp = client.chat.completions.create(
+        model="llama-3.1-70b-versatile",
+        max_tokens=8000,
         messages=[
+             {
+                "role": "system",
+                "content": "You are a spellchecker database that outputs grammars errors and corrected text in JSON.\n"
+                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}",
+            },
             {
                 "role": "user",
                 "content": create_prompt(text),
             }
         ],
-        response_model=Grammar,
+        response_format={"type": "json_object"},
     )
-    
-    return resp
+
+    return Grammar.model_validate_json(resp.choices[0].message.content)
 
 def display_results(response: Grammar):
     """Display the grammar check results using Rich."""
@@ -91,7 +98,6 @@ def display_results(response: Grammar):
             if error.before != error.after:
                 table.add_row(error.before, error.after, error.explanation)
 
-        # Only print the table if it has rows
         if table.row_count > 0:
             console.print(table)
         else:
