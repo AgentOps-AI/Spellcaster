@@ -23,7 +23,8 @@ dependencies = [
     "python-dotenv",
     "rich",
     "anthropic",
-    "groq"
+    "groq",
+    "GitPython"
 ]
 
 [project.urls]

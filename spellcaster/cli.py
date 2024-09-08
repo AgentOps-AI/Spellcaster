@@ -40,7 +40,7 @@ def main():
     if args.url:
         current_dir = Path.cwd()
         repo_name = args.url.split("/")[-1].replace(".git", "")
-        directory = current_dir / "samples" / repo_name
+        directory = current_dir / "spellcaster" / "samples" /  repo_name
         if directory.exists():
             print(f"Repository already exists at {directory}")
         else:

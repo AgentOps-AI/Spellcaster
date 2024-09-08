@@ -3,3 +3,4 @@ rich
 anthropic
 groq
 litellm
+gitpython
