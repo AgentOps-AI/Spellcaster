@@ -8,26 +8,23 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 from rich.box import ROUNDED
-from groq import Groq
-import os
+import litellm
+import dotenv
+dotenv.load_dotenv()
 
 
-class Error(BaseModel):
-    before: str
-    after: str
-    explanation: str
+# class Error(BaseModel):
+#     before: str
+#     after: str
+#     explanation: str
 
 
-class Grammar(BaseModel):
-    spelling: list[Error]
-    punctuation: list[Error]
-    grammar: list[Error]
-    corrected: str
+# class Grammar(BaseModel):
+#     spelling: list[Error]
+#     punctuation: list[Error]
+#     grammar: list[Error]
+#     corrected: str
 
-
-client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),
-)
 
 console = Console()
 
@@ -68,22 +65,23 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
     """Check grammar of the text in the provided file using Claude."""
     text = read_file(file_path)
 
-    resp = client.chat.completions.create(
-        model="llama-3.1-70b-versatile",
-        max_tokens=8000,
+    resp = litellm.completion(
+        model="gpt-3.5-turbo",
+        response_format={"type": "json_object"},
         messages=[
             {
                 "role": "system",
                 "content": "You are a spellchecker database that outputs grammars errors and corrected text in JSON.\n"
-                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}",
+                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}"
             },
             {
                 "role": "user",
-                "content": create_prompt(text),
+                "content": create_prompt(text)
             }
-        ],
-        response_format={"type": "json_object"},
+        ]
     )
+
+    print(resp)
 
     try:
         return Grammar.model_validate_json(resp.choices[0].message.content)
