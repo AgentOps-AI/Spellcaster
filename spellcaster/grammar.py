@@ -106,11 +106,19 @@ def display_results(response: Grammar):
     console.print(Text("\nCorrected Text:\n", style="bold cyan"))
     console.print(Text(response.corrected, style="white"))
 
-if __name__ == "__main__":
-    file_path = "../data/test.mdx"
+def process_file(file_path: str):
+    """Process a single file and display results."""
+    console.print(f"\n[bold cyan]Processing file: {file_path}[/bold cyan]")
     response = check_grammar_with_claude(file_path)
-    
     display_results(response)
     
-    with open("../data/response.txt", "w") as file:
+    output_file = f"{file_path.rsplit('.', 1)[0]}_corrected.mdx"
+    with open(output_file, "w") as file:
         file.write(response.corrected)
+    console.print(f"[green]Corrected text saved to: {output_file}[/green]")
+
+if __name__ == "__main__":
+    sample_files = ["../data/sample1.mdx", "../data/sample2.mdx", "../data/sample3.mdx"]
+    
+    for file_path in sample_files:
+        process_file(file_path)
