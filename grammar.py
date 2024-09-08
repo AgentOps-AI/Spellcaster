@@ -1,5 +1,4 @@
 import instructor
-import os
 from anthropic import Anthropic
 from pydantic import BaseModel
 from dotenv import load_dotenv
