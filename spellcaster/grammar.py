@@ -2,16 +2,8 @@ import json
 from pydantic import BaseModel
 from rich.console import Console
 from rich.table import Table
-from rich.text import Text
-
-from rich.console import Console
-from rich.table import Table
-from rich.text import Text
 from rich.box import ROUNDED
 import litellm
-import dotenv
-dotenv.load_dotenv()
-
 
 class Error(BaseModel):
     before: str
@@ -66,7 +58,7 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
     text = read_file(file_path)
 
     resp = litellm.completion(
-        model="gpt-3.5-turbo",
+        model="groq/llama3-8b-8192",
         response_format={"type": "json_object"},
         messages=[
             {
@@ -81,11 +73,10 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
         ]
     )
 
-    print(resp)
-
     try:
-        return Grammar.model_validate_json(resp.choices[0].message.content)
-    except Error:
+        resp = Grammar.model_validate_json(resp.choices[0].message.content)
+        return resp
+    except Exception as e:
         return Grammar(spelling=[], punctuation=[], grammar=[], corrected=text)
 
 
@@ -107,8 +98,8 @@ def display_results(response: Grammar):
         else:
             console.print(f"No {category} errors found.")
 
-    console.print(Text("\nCorrected Text:\n", style="bold cyan"))
-    console.print(Text(response.corrected, style="white"))
+    # console.print(Text("\nCorrected Text:\n", style="bold cyan"))
+    # console.print(Text(response.corrected, style="white"))
 
 
 def process_file(file_path: str):

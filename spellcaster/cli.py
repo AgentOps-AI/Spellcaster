@@ -67,7 +67,7 @@ def main():
         for i, future in enumerate(concurrent.futures.as_completed(futures), 1):
             result = future.result()
             results.append(result)
-            print(f"Processed file {i}/{len(futures)}: {result['file_path']}")
+            print(f"Processed file {i}/{len(futures)}")
 
     print("\nGrammar check results:")
     for result in results:
