@@ -1,6 +1,8 @@
 # Spellcaster
 
-<img src="assets/spellcasterlogo.png" alt="Spellcaster Logo" width="300"/>
+<p align="center">
+  <img src="assets/spellcasterlogo.png" alt="Spellcaster Logo" width="300"/>
+</p>
 
 _AI-powered documentation and code quality enhancement for your repositories._
 
