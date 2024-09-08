@@ -1,16 +1,18 @@
-import os
 import argparse
-import agentops
-from spellcaster.config import FILE_TYPES
-from spellcaster.traverse_repo import get_file_paths
-from spellcaster.grammar import check_grammar_with_claude, display_results
-from spellcaster.github import clone_repository
 import concurrent.futures
-import tempfile
+import os
 import shutil
+import tempfile
 from pathlib import Path
 
+import agentops
 from dotenv import load_dotenv
+
+from spellcaster.config import FILE_TYPES
+from spellcaster.github import clone_repository
+from spellcaster.grammar import check_grammar_with_claude, display_results
+from spellcaster.traverse_repo import get_file_paths
+
 load_dotenv()
 
 
@@ -18,9 +20,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Scan a directory or GitHub repository and optionally specify an LLM provider."
     )
-    parser.add_argument(
-        "-d", "--directory", type=str, help="The directory to scan"
-    )
+    parser.add_argument("-d", "--directory", type=str, help="The directory to scan")
     parser.add_argument(
         "-u", "--url", type=str, help="The GitHub repository URL to clone and scan"
     )
@@ -62,8 +62,11 @@ def main():
 
     agentops.init(os.environ.get("AGENTOPS_API_KEY"), tags=["spellcaster", 'agentops', 'Cerebras', 'Llama3.1-70B'])
     results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        futures = [executor.submit(check_grammar_with_claude, file_path) for file_path in file_paths]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+        futures = [
+            executor.submit(check_grammar_with_claude, file_path)
+            for file_path in file_paths[:10]
+        ]
         for i, future in enumerate(concurrent.futures.as_completed(futures), 1):
             result = future.result()
             results.append(result)
@@ -74,8 +77,10 @@ def main():
         display_results(result)
 
     print("Grammar check completed.")
-    agentops.end_session('Success')
+    agentops.end_session("Success")
 
 
+if __name__ == "__main__":
+    main()
 if __name__ == "__main__":
     main()

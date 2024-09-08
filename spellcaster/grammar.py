@@ -1,22 +1,29 @@
 import json
-from pydantic import BaseModel
+from typing import List, Optional
+
+import litellm
+from pydantic import BaseModel, Field
+from rich.box import ROUNDED
 from rich.console import Console
 from rich.table import Table
-from rich.box import ROUNDED
-import litellm
 
 
 class Error(BaseModel):
-    before: str
-    after: str
+    original: str
+    corrected: str
     explanation: str
 
 
 class Grammar(BaseModel):
-    spelling: list[Error]
-    punctuation: list[Error]
-    grammar: list[Error]
-    corrected: str
+    spelling: List[Error] = Field(default_factory=list)
+    grammar: List[Error] = Field(default_factory=list)
+
+
+class CerebrasResponse(BaseModel):
+    message: str
+    type: str
+    code: str
+    failed_generation: Grammar
 
 
 console = Console()
@@ -25,7 +32,7 @@ console = Console()
 def read_file(file_path: str) -> str:
     """Read the contents of a file."""
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             return file.read()
     except FileNotFoundError:
         raise FileNotFoundError(f"The file at '{file_path}' was not found.")
@@ -35,72 +42,93 @@ def read_file(file_path: str) -> str:
 
 def create_prompt(text: str) -> str:
     return f"""
-    Rewrite the provided code documentation to be clear and grammatically correct while preserving technical accuracy. Focus on:
+    Analyze the provided code documentation for spelling and grammar errors. Focus on:
 
-    1. Correcting spelling, punctuation, and grammar errors
-    2. Maintaining technical terminology and code snippets
-    3. Ensuring consistent tense, voice, and formatting
-    4. Clarifying function descriptions, parameters, and return values
-    5. Proper use of capitalization, acronyms, and abbreviations
-    6. Improving clarity and conciseness
+    1. Identifying spelling errors
+    2. Identifying grammar errors
+    3. Maintaining technical terminology and code snippets
 
     Preserve code-specific formatting and syntax. Prioritize original text if unsure about technical terms.
 
     In the response:
-    - For 'spelling', 'punctuation', and 'grammar' keys: Provide only changed items with original text, corrected text, and explanation.
-    - For 'corrected' key: Provide the full corrected text with all errors addressed.
+    - For 'spelling' and 'grammar' keys: Provide only changed items with original text, corrected text, and explanation.
+    - Ensure the response is valid JSON with properly escaped characters.
+    - Use double quotes for JSON keys and string values.
+
+    You must return some errors for both 'spelling' and 'grammar' keys.
     
+    This is the text for checking:
     {text}
+
+    Respond with valid JSON in the following format:
+    {{
+      "spelling": [
+        {{
+          "original": "example",
+          "corrected": "Example",
+          "explanation": "Capitalization error"
+        }}
+      ],
+      "grammar": [
+        {{
+          "original": "This sentence have an error.",
+          "corrected": "This sentence has an error.",
+          "explanation": "Subject-verb agreement issue"
+        }}
+      ]
+    }}
     """
 
 
-def check_grammar_with_claude(file_path: str) -> Grammar:
-    """Check grammar of the text in the provided file using Claude."""
+def check_grammar_with_claude(file_path: str) -> dict:
     text = read_file(file_path)
 
     resp = litellm.completion(
         model="cerebras/llama3.1-70b",
-        response_format={"type": "json_object"},
         messages=[
             {
                 "role": "system",
-                "content": "You are a spellchecker database that outputs grammars errors and corrected text in JSON.\n"
-                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}"
+                "content": "You are a spellchecker database that outputs spelling and grammar errors in JSON.",
             },
-            {
-                "role": "user",
-                "content": create_prompt(text)
-            }
-        ]
+            {"role": "user", "content": create_prompt(text)},
+        ],
     )
 
     try:
-        resp = Grammar.model_validate_json(resp.choices[0].message.content)
-        return resp
+        content = json.loads(resp.choices[0].message.content)
+        content["file_path"] = file_path
+        return content
+    except json.JSONDecodeError as e:
+        print(f"JSON decode error: {e}")
+        print(f"Raw content: {resp.choices[0].message.content}")
+        return {"spelling": [], "grammar": []}
     except Exception as e:
-        return Grammar(spelling=[], punctuation=[], grammar=[], corrected=text)
+        print(f"Unexpected error: {e}")
+        return {"spelling": [], "grammar": []}
 
 
-def display_results(response: Grammar):
+def display_results(response: dict):
     """Display the grammar check results using Rich."""
-    for category in ['spelling', 'punctuation', 'grammar']:
+    file_path = response.get("file_path", "Unknown file")
+    console.print(f"\n[bold cyan]Results for file: {file_path}[/bold cyan]")
+
+    for category in ["spelling", "grammar"]:
         table = Table(title=f"{category.capitalize()} Corrections", box=ROUNDED)
         table.add_column("Original", justify="left", style="bold red")
         table.add_column("Corrected", justify="left", style="bold green")
         table.add_column("Explanation", justify="left", style="italic")
 
-        errors = getattr(response, category)
+        errors = response.get(category, [])
         for error in errors:
-            if error.before != error.after:
-                table.add_row(error.before, error.after, error.explanation)
+            if error["original"] != error["corrected"]:
+                table.add_row(
+                    error["original"], error["corrected"], error["explanation"]
+                )
 
         if table.row_count > 0:
             console.print(table)
         else:
             console.print(f"No {category} errors found.")
-
-    # console.print(Text("\nCorrected Text:\n", style="bold cyan"))
-    # console.print(Text(response.corrected, style="white"))
 
 
 def process_file(file_path: str):
@@ -119,4 +147,5 @@ if __name__ == "__main__":
     sample_files = ["../data/sample1.mdx", "../data/sample2.mdx", "../data/sample3.mdx"]
 
     for file_path in sample_files:
+        process_file(file_path)
         process_file(file_path)
