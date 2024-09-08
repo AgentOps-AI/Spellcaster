@@ -20,11 +20,13 @@
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/areibman/spellcaster.git
    ```
 
 2. Navigate to the project directory:
+
    ```bash
    cd spellcaster
    ```
@@ -36,14 +38,15 @@
 
 ### Usage
 
-To run Spellcaster on your repository:
+To run Spellcaster on a directory:
 
 1. In your terminal, run the following command:
+
    ```bash
-   python spellcaster.py <path-to-your-repo>
+   python -m spellcaster -d <path-to-your-directory>
    ```
 
-2. Spellcaster will analyze the repository and output any detected issues, along with suggestions for fixing them.
+2. Spellcaster will analyze the directory and output any detected issues, along with suggestions for fixing them.
 
 ### Configuration
 
