@@ -1,0 +1,1167 @@
+
+File: https://github.com/getcursor/docs/blob/main/docs/advanced/models.mdx
+No spelling errors found.
+                                                                 Punctuation Corrections                                                                  
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ With Cursor Chat, Ctrl/⌘ K, and Terminal Ctrl/⌘  │ With Cursor Chat, Ctrl/⌘K, and Terminal Ctrl/⌘K, │ Removed space between 'Ctrl/⌘' and 'K' for       │
+│ K, you can easily switch between different       │ you can easily switch between different models   │ consistency.                                     │
+│ models of your choice.                           │ of your choice.                                  │                                                  │
+│                                                  │                                                  │                                                  │
+│ Underneath the AI input box, you will see a      │ Underneath the AI input box, you will see a      │ Removed the unneeded colon at the end of the     │
+│ dropdown that allows you to select the model you │ dropdown that allows you to select the model you │ sentence.                                        │
+│ want to use. By default, Cursor has these models │ want to use. By default, Cursor has these models │                                                  │
+│ ready to use:                                    │ ready to use.                                    │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ `cursor-small` is Cursor's custom model that     │ `cursor-small` is Cursor's custom model that     │ Added a comma after 'faster' to improve          │
+│ isn't as smart as `GPT-4`, but is faster and     │ isn't as smart as `GPT-4` but is faster, and     │ readability.                                     │
+│ users have unlimited access to it.               │ users have unlimited access to it.               │                                                  │
+│                                                  │                                                  │                                                  │
+│ In chat, we limit to around 20,000 tokens at the │ In chat, we limit to around 20,000 tokens at the │ Replaced 'less' with 'fewer' for countable noun  │
+│ moment (or less if the model does not support    │ moment (or fewer if the model does not support   │ 'tokens'. Removed unnecessary comma after        │
+│ that much context). For cmd-K, we limit to       │ that much context). For cmd-K, we limit to       │ 'tokens'.                                        │
+│ around 10,000 tokens, to balance TTFT and        │ around 10,000 tokens to balance TTFT and         │                                                  │
+│ quality. Long-context chat uses the model's      │ quality. Long-context chat uses the model's      │                                                  │
+│ maximum context window.                          │ maximum context window.                          │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/snippets/custom-subpath-gating.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Your primary domain (company.com) is hosted on   │ Your primary domain (company.com) is hosted on   │ Fixed sentences to ensure clear and proper       │
+│ Cloudflare                                       │ Cloudflare and you are on the [Mintlify startup  │ phrasing. Removed unnecessary line breaks to     │
+│   and you are on the [Mintlify startup plan or   │ plan or above](https://mintlify.com/pricing).    │ maintain consistency in tense, voice, and        │
+│   above](https://mintlify.com/pricing).          │                                                  │ formatting.                                      │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/table.mdx
+No spelling errors found.
+No punctuation errors found.
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/docs/code.mdx
+No spelling errors found.
+                                                                 Punctuation Corrections                                                                  
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Use                                              │ Use                                              │ Added a comma for better readability and correct │
+│ (https://www.markdownguide.org/extended-syntax/… │ (https://www.markdownguide.org/extended-syntax/… │ punctuation.                                     │
+│ by enclosing code in three backticks and follow  │ by enclosing code in three backticks, and follow │                                                  │
+│ the leading ticks with the programming language  │ the leading ticks with the programming language  │                                                  │
+│ of your snippet to get syntax highlighting.      │ of your snippet to get syntax highlighting.      │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Optionally, you can also write the name of your  │ Optionally, you can write the name of your code  │ The word 'also' is redundant and can be removed  │
+│ code after the programming language.             │ after the programming language.                  │ for conciseness.                                 │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/development.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ If you attempt to run Mintlify on a port that's  │ If you attempt to run Mintlify on a port that is │ Changed ‘that's’ to ‘that is’ for formal tone    │
+│ already in use, it will use the next available   │ already in use, it will use the next available   │ consistency.                                     │
+│ port:                                            │ port:                                            │                                                  │
+│                                                  │                                                  │                                                  │
+│ ```md                                            │ ```md                                            │                                                  │
+│ Port 3000 is already in use. Trying 3001         │ Port 3000 is already in use. Trying 3001         │                                                  │
+│ instead.                                         │ instead.                                         │                                                  │
+│ ```                                              │ ```                                              │                                                  │
+│                                                  │                                                  │                                                  │
+│ This may be due to an outdated version of node.  │ This may be due to an outdated version of        │ Changed 'node' to 'Node.js' for clarity and      │
+│                                                  │ Node.js.                                         │ formal tone.                                     │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/reusable-snippets.mdx
+                                                                  Spelling Corrections                                                                   
+╭──────────────────────────────┬─────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────╮
+│ Original                     │ Corrected                   │ Explanation                                                                              │
+├──────────────────────────────┼─────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────┤
+│ Lorem impsum dolor sit amet. │ Lorem ipsum dolor sit amet. │ Corrected the misspelling of 'ipsum' which is part of the common Latin placeholder text. │
+│                              │                             │                                                                                          │
+╰──────────────────────────────┴─────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────╯
+No punctuation errors found.
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ This is a principle that applies to              │ This principle applies to documentation as well. │ Simplified the sentence for clarity and          │
+│ documentation as well.                           │                                                  │ conciseness.                                     │
+│                                                  │                                                  │                                                  │
+│ 2. Import the snippet into your destination file │ 2. Import the snippet into your destination file │ Corrected to match plural usage since multiple   │
+│ and use the variable:                            │ and use the variables:                           │ variables are being used.                        │
+│                                                  │                                                  │                                                  │
+│ import MySnippet from                            │ import MySnippet from                            │ Corrected the import path to use a relative path │
+│ '/snippets/path/to/my-snippet.mdx';              │ './snippets/path/to/my-snippet.mdx';             │ which is a common practice in file imports.      │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/text.mdx
+No spelling errors found.
+                                                                 Punctuation Corrections                                                                  
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ ## Titles                                        │ ## Titles                                        │ Corrected the phrase 'Best use to subsection     │
+│                                                  │                                                  │ headers' to 'Best used for subsection headers'   │
+│ Best use to subsection headers.                  │ Best used for subsection headers.                │ for proper grammatical construction.             │
+│                                                  │                                                  │                                                  │
+│ For example, (https://google.com)                │ For example, write `(https://google.com)` to     │ Corrected the phrase 'link to google' to 'link   │
+│ `(https://google.com)` to (https://google.com).  │ (https://google.com).                            │ to Google' to use proper capitalization for the  │
+│                                                  │                                                  │ proper noun 'Google'.                            │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Markdown syntax also recognizes a double enter   │ Markdown syntax also recognizes a double enter   │ Corrected the term 'linebreak' to 'line break'   │
+│ in your MDX as a linebreak.                      │ in your MDX as a line break.                     │ for proper grammatical spacing.                  │
+│                                                  │                                                  │                                                  │
+│ You can validate broken links in your docs with  │ You can validate broken links in your            │ Revised 'your docs' to 'your documentation' for  │
+│ (/development).                                  │ documentation with (/development).               │ clarity and formality.                           │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/list-table.mdx
+No spelling errors found.
+                                                                 Punctuation Corrections                                                                  
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ To create an ordered list, add line items with   │ To create an ordered list, add line items with   │ Added a period at the end to complete the        │
+│ numbers followed by periods                      │ numbers followed by periods.                     │ sentence.                                        │
+│                                                  │                                                  │                                                  │
+│ To create an unordered list, add dashes (`-`),   │ To create an unordered list, add dashes (`-`),   │ Added a period at the end to complete the        │
+│ asterisks (`*`), or plus signs (`+`) in front of │ asterisks (`*`), or plus signs (`+`) in front of │ sentence.                                        │
+│ line items                                       │ line items.                                      │                                                  │
+│                                                  │                                                  │                                                  │
+│ Add indents on list items to nest them           │ Add indents to list items to nest them.          │ Added a period at the end to complete the        │
+│                                                  │                                                  │ sentence and adjusted preposition usage.         │
+│                                                  │                                                  │                                                  │
+│ To add a table, use three or more hyphens        │ To add a table, use three or more hyphens        │ Added a period at the end to complete the        │
+│ (`---`) to create each column's header, and use  │ (`---`) to create each column's header, and use  │ sentence.                                        │
+│ pipes (`|`) to separate each column              │ pipes (`|`) to separate each column.             │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                      Grammar Corrections                                                      
+╭────────────────────────────────────────┬─────────────────────────────────────────┬──────────────────────────────────────────╮
+│ Original                               │ Corrected                               │ Explanation                              │
+├────────────────────────────────────────┼─────────────────────────────────────────┼──────────────────────────────────────────┤
+│ Add indents on list items to nest them │ Add indents to list items to nest them. │ Corrected preposition from 'on' to 'to'. │
+│                                        │                                         │                                          │
+╰────────────────────────────────────────┴─────────────────────────────────────────┴──────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/image-embeds.mdx
+                             Spelling Corrections                             
+╭───────────────┬───────────────┬────────────────────────────────────────────╮
+│ Original      │ Corrected     │ Explanation                                │
+├───────────────┼───────────────┼────────────────────────────────────────────┤
+│ accessability │ accessibility │ Corrected the spelling of 'accessibility'. │
+│               │               │                                            │
+╰───────────────┴───────────────┴────────────────────────────────────────────╯
+                                                                 Punctuation Corrections                                                                  
+╭─────────────────────────────────────────────────┬───────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                        │ Corrected                                         │ Explanation                                      │
+├─────────────────────────────────────────────────┼───────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ be written in camelCase: autoPlay, playsInline. │ be written in camelCase: `autoPlay`,              │ Added backticks around `autoPlay` and            │
+│                                                 │ `playsInline`.                                    │ `playsInline` for proper code formatting.        │
+│                                                 │                                                   │                                                  │
+╰─────────────────────────────────────────────────┴───────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Mintlify supports files up to 5 MB. To use       │ Mintlify supports files up to 5 MB. To use       │ Added 'the files' to clarify what is being       │
+│ larger files, consider a storage service like    │ larger files, consider a storage service like    │ embedded.                                        │
+│ Cloudinary and embed in your Mintlify            │ Cloudinary and embed the files in your Mintlify  │                                                  │
+│ documentation.                                   │ documentation.                                   │                                                  │
+│                                                  │                                                  │                                                  │
+│ Note that the image file size must be less than  │ Note that the image file size must be less than  │ Added 'the images' to specify what should be     │
+│ 5MB. Otherwise, we recommend hosting on a        │ 5 MB. Otherwise, we recommend hosting the images │ hosted on the service.                           │
+│ service like Cloudinary or S3.                   │ on a service like Cloudinary or S3.              │                                                  │
+│                                                  │                                                  │                                                  │
+│ This is helpful if you prefer HTML tags to       │ This is helpful if you prefer HTML tags over     │ Changed 'to' to 'over' for correct preposition   │
+│ Markdown syntax, and lets you create             │ Markdown syntax and allows you to create         │ usage and corrected verb agreement.              │
+│ documentation with infinite flexibility.         │ documentation with infinite flexibility.         │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/page.mdx
+No spelling errors found.
+                                                                 Punctuation Corrections                                                                  
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Each page is an MDX file that should begin with  │ Each page is an MDX file that should begin with  │ Added a comma for correct punctuation to         │
+│ the following metadata syntax with `---` at the  │ the following metadata syntax, with `---` at the │ separate clauses in the sentence.                │
+│ start and end:                                   │ start and end:                                   │                                                  │
+│                                                  │                                                  │                                                  │
+│ For example, this page uses this metadata:       │ For example, this page uses the following        │ Adjusted the sentence for clarity and            │
+│                                                  │ metadata:                                        │ conciseness.                                     │
+│                                                  │                                                  │                                                  │
+│ You can show a description that shows directly   │ You can show a description directly under the    │ Removed redundant phrase to enhance clarity.     │
+│ under the title with the `description` metadata. │ title with the `description` metadata.           │                                                  │
+│                                                  │                                                  │                                                  │
+│ This is useful if your title is long and you     │ This is useful if your title is long and you     │ Changed 'in' to 'for' to prevent ambiguity.      │
+│ want something shorter in the navigation links.  │ want something shorter for the navigation links. │                                                  │
+│                                                  │                                                  │                                                  │
+│ Want an icon for your sidebar item like the ones │ Do you want an icon for your sidebar item like   │ Added 'Do you' to form a complete question.      │
+│ in (/content/components/accordions)? You can set │ the ones in (/content/components/accordions)?    │                                                  │
+│ an `icon` attribute in the metadata!             │ You can set an `icon` attribute in the metadata! │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Meta tags with colons need to be wrapped in      │ Meta tags with colons need to be enclosed in     │ Changed 'wrapped' to 'enclosed' for correct term │
+│ quotes.                                          │ quotes.                                          │ usage.                                           │
+│                                                  │                                                  │                                                  │
+│ All icons from [Font                             │ All icons from [Font                             │ Corrected 'for us' to 'for use' for clarity and  │
+│ Awesome](https://fontawesome.com/icons) are      │ Awesome](https://fontawesome.com/icons) are      │ grammatical correctness.                         │
+│ available for us.                                │ available for use.                               │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/quickstart.mdx
+                                                                  Spelling Corrections                                                                   
+╭──────────┬───────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Original │ Corrected │ Explanation                                                                                                                    │
+├──────────┼───────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ mono-rep │ monorepo  │ Spelling correction - 'monorep' is incorrect; the intended term is 'monorepo' as used in software version control terminology. │
+│          │           │                                                                                                                                │
+╰──────────┴───────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                 Punctuation Corrections                                                                  
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Navigate to your                                 │ Navigate to your                                 │ Removed unnecessary 'www.' in the URL to ensure  │
+│ (https://www.dashboard.mintlify.com/settings) to │ (https://dashboard.mintlify.com/settings) to add │ consistency and correctness.                     │
+│ add a custom domain.                             │ a custom domain.                                 │                                                  │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+                                                                   Grammar Corrections                                                                    
+╭──────────────────────────────────────────────────┬──────────────────────────────────────────────────┬──────────────────────────────────────────────────╮
+│ Original                                         │ Corrected                                        │ Explanation                                      │
+├──────────────────────────────────────────────────┼──────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+│ Mintlify docs are rendered from MDX files and    │ Mintlify docs are rendered from MDX files and    │ Corrected punctuation and capitalized 'GitHub'   │
+│ configurations defined in our                    │ configurations defined in our                    │ to align with official naming conventions.       │
+│ (https://github.com/mintlify/starter). We use    │ (https://github.com/mintlify/starter). We use    │                                                  │
+│ Github to                                        │ GitHub to integrate your docs with your code and │                                                  │
+│ integrate your docs with your code, and make     │ make source control effortless.                  │                                                  │
+│ source control effortless.                       │                                                  │                                                  │
+│                                                  │                                                  │                                                  │
+│ To create your docs repo without logging into    │ To create your docs repo without logging into    │ Capitalized 'GitHub' to align with official      │
+│ Github, follow these instructions:               │ GitHub, follow these instructions:               │ naming conventions.                              │
+│                                                  │                                                  │                                                  │
+│ The next step is to install our Github app. This │ The next step is to install our GitHub app. This │ Corrected capitalization of 'GitHub' and refined │
+│ ensures that your updates are automatically      │ ensures that your updates are automatically      │ the prepositional phrase for better clarity.     │
+│ deployed when you push changes. You can find the │ deployed when you push changes. You can find the │                                                  │
+│ installation link in the                         │ installation link on the                         │                                                  │
+│ (https://dashboard.mintlify.com/settings), on    │ (https://dashboard.mintlify.com/settings) under  │                                                  │
+│ the Settings page.                               │ the 'Settings' page.                             │                                                  │
+│                                                  │                                                  │                                                  │
+│ Here are two ways to edit your repository        │ Here are two ways to edit your repository        │ Changed colon to a period to maintain            │
+│ online:                                          │ online.                                          │ consistency in list formatting.                  │
+│                                                  │                                                  │                                                  │
+│ > The mono-repo setup eliminates the need for    │ > The monorepo setup eliminates the need for     │ Corrected the term from 'mono-repo' to           │
+│ creating a new repo.                             │ creating a new repo.                             │ 'monorepo' for consistency with software         │
+│                                                  │                                                  │ terminology.                                     │
+│                                                  │                                                  │                                                  │
+│ Easily customize colors, logos and buttons among │ Easily customize colors, logos, and buttons,     │ Added necessary commas for improved readability  │
+│ other configurations in our `mint.json` file.    │ among other configurations, in our `mint.json`   │ and grammatical correctness.                     │
+│ Start with these basic configurations:           │ file. Start with these basic configurations:     │                                                  │
+│                                                  │                                                  │                                                  │
+│ Your docs site                                   │ your docs site                                   │ Changed capitalization to match the lowercase    │
+│                                                  │                                                  │ initial letter as it is in continuation of the   │
+│                                                  │                                                  │ previous sentence                                │
+│                                                  │                                                  │                                                  │
+╰──────────────────────────────────────────────────┴──────────────────────────────────────────────────┴──────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/text.mdx
+No spelling errors found.
+                                                                      Punctuation Corrections                                                                       
+╭─────────────────────────────────┬───────────────────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Original                        │ Corrected                         │ Explanation                                                                                │
+├─────────────────────────────────┼───────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Best use to subsection headers. │ Best used for subsection headers. │ The phrase should use the past tense ('used') to match the structure of similar sentences. │
+│                                 │                                   │                                                                                            │
+╰─────────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/docs/code.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Optionally, you can also write the name of your code after the       │ Optionally, you can also write the name of your file after the       │ The term 'file' is more appropriate than 'code' in this context, as  │
+│ programming language.                                                │ programming language.                                                │ it refers to the name of the file containing the code.               │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/list-table.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────╮
+│ Original                                                               │ Corrected                                                             │ Explanation                                                       │
+├────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────┤
+│ To create an ordered list, add line items with numbers followed by     │ To create an ordered list, add line items with numbers followed by    │ Added a period at the end of the sentence for proper punctuation. │
+│ periods                                                                │ periods.                                                              │                                                                   │
+│                                                                        │                                                                       │                                                                   │
+│ To create an unordered list, add dashes (`-`), asterisks (`*`), or     │ To create an unordered list, add dashes (`-`), asterisks (`*`), or    │ Added a period at the end of the sentence for proper punctuation. │
+│ plus signs (`+`) in front of line items                                │ plus signs (`+`) in front of line items.                              │                                                                   │
+│                                                                        │                                                                       │                                                                   │
+│ Add indents on list items to nest them                                 │ Add indents on list items to nest them.                               │ Added a period at the end of the sentence for proper punctuation. │
+│                                                                        │                                                                       │                                                                   │
+╰────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/docs/snippets/custom-subpath-gating.mdx
+No spelling errors found.
+                                                                      Punctuation Corrections                                                                       
+╭─────────────────────────────────────────┬──────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────╮
+│ Original                                │ Corrected                                        │ Explanation                                                         │
+├─────────────────────────────────────────┼──────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────┤
+│ ...plan or                              │ ...plan or above](https://mintlify.com/pricing). │ Removed unnecessary newline for better readability and consistency. │
+│   above](https://mintlify.com/pricing). │                                                  │                                                                     │
+│                                         │                                                  │                                                                     │
+╰─────────────────────────────────────────┴──────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭───────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────────────╮
+│ Original                                                  │ Corrected                                                                 │ Explanation                                                                │
+├───────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ Your primary domain (company.com) is hosted on Cloudflare │ Your primary domain (company.com) is hosted on Cloudflare and you are on  │ Combined lines to ensure the sentence is grammatically complete and flows  │
+│   and you are on the [Mintlify startup plan or            │ the [Mintlify startup plan or above](https://mintlify.com/pricing).       │ better.                                                                    │
+│   above](https://mintlify.com/pricing).                   │                                                                           │                                                                            │
+│                                                           │                                                                           │                                                                            │
+╰───────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/table.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭─────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────╮
+│ Original                                                                    │ Corrected                                                                   │ Explanation                                            │
+├─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┤
+│ To add a table, use three or more hyphens (`---`) to create each column's   │ To add a table, use three or more hyphens (`---`) to create each column's   │ Removed the comma before 'and' to correct punctuation. │
+│ header, and use pipes (`|`) to separate each column.                        │ header and use pipes (`|`) to separate each column.                         │                                                        │
+│                                                                             │                                                                             │                                                        │
+╰─────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ The Table component follows the official                             │ The `Table` component follows the official [Markdown                 │ Enclosed `Table` in backticks for consistency with markdown          │
+│ (https://www.markdownguide.org/extended-syntax/#tables).             │ syntax](https://www.markdownguide.org/extended-syntax/#tables).      │ formatting and capitalized 'Markdown' as it is a proper noun.        │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/image-embeds.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Since Mintlify needs to adhere to the JSX syntax, double word        │ Since Mintlify needs to adhere to the JSX syntax, double-word        │ Added a hyphen between 'double' and 'word' to correctly form the     │
+│ attributes will need to be written in camelCase: autoPlay,           │ attributes will need to be written in camelCase: autoPlay,           │ compound adjective 'double-word'.                                    │
+│ playsInline.                                                         │ playsInline.                                                         │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ To disable the default zoom on click for images, add the noZoom      │ To disable the default zoom-on-click for images, add the `noZoom`    │ Added hyphens in 'zoom-on-click' to form a compound adjective and    │
+│ property to image embeds.                                            │ property to image embeds.                                            │ enclosed `noZoom` in backticks for consistency.                      │
+│                                                                      │                                                                      │                                                                      │
+│ Mintlify supports files up to 5 MB. To use larger files, consider a  │ Mintlify supports files up to 5 MB. To use larger files, consider a  │ Changed 'embed' to 'embedding it' for grammatical correctness.       │
+│ storage service like Cloudinary and embed in your Mintlify           │ storage service like Cloudinary and embedding it in your Mintlify    │                                                                      │
+│ documentation.                                                       │ documentation.                                                       │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/reusable-snippets.mdx
+                                                 Spelling Corrections                                                 
+╭──────────────────────────────┬─────────────────────────────┬───────────────────────────────────────────────────────╮
+│ Original                     │ Corrected                   │ Explanation                                           │
+├──────────────────────────────┼─────────────────────────────┼───────────────────────────────────────────────────────┤
+│ Lorem impsum dolor sit amet. │ Lorem ipsum dolor sit amet. │ Corrected spelling error; 'impsum' should be 'ipsum'. │
+│                              │                             │                                                       │
+╰──────────────────────────────┴─────────────────────────────┴───────────────────────────────────────────────────────╯
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ By default, Mintlify employs server-side rendering, generating       │ By default, Mintlify employs server-side rendering, generating       │ Added 'that you' to clarify the sentence structure and improve       │
+│ content at build time. For client-side content loading, ensure to    │ content at build time. For client-side content loading, ensure that  │ readability.                                                         │
+│ verify the `document` object's availability before initiating the    │ you verify the `document` object's availability before initiating    │                                                                      │
+│ rendering process.                                                   │ the rendering process.                                               │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ title: My title description: My Description                          │ title: My title description: My description                          │ Corrected capitalization for stylistic consistency within the code   │
+│                                                                      │                                                                      │ snippets.                                                            │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ This is a principle that applies to documentation as well. If you    │ This principle applies to documentation as well. If you find         │ Removed unnecessary 'that' and 'you should' for clarity and          │
+│ find yourself repeating the same content in multiple places, you     │ yourself repeating the same content in multiple places, consider     │ conciseness.                                                         │
+│ should consider creating a custom snippet to keep your content in    │ creating a custom snippet to keep your content in sync.              │                                                                      │
+│ sync.                                                                │                                                                      │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/development.mdx
+No spelling errors found.
+                                                      Punctuation Corrections                                                      
+╭────────────────────┬──────────────────────────┬─────────────────────────────────────────────────────────────────────────────────╮
+│ Original           │ Corrected                │ Explanation                                                                     │
+├────────────────────┼──────────────────────────┼─────────────────────────────────────────────────────────────────────────────────┤
+│ Try the following: │ Try the following steps: │ Using 'steps' makes the instruction clearer and indicates a multi-step process. │
+│                    │                          │                                                                                 │
+╰────────────────────┴──────────────────────────┴─────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ This may be due to an outdated version of node.                      │ This issue may be due to an outdated version of Node.js.             │ Clarified the sentence by adding 'issue' and capitalizing 'Node.js'  │
+│                                                                      │                                                                      │ to properly reference the software.                                  │
+│                                                                      │                                                                      │                                                                      │
+│ If your local website doesn't align with the production version,     │ If your local website doesn't align with the production version,     │ Removed 'please' to make the instruction more concise and direct.    │
+│ please update the CLI:                                               │ update the CLI:                                                      │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ 3. Reinstall mintlify: `npm install -g mintlify`                     │ 3. Reinstall Mintlify: `npm install -g mintlify`                     │ Capitalized 'Mintlify' to maintain consistency in naming proper      │
+│                                                                      │                                                                      │ nouns.                                                               │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/docs/quickstart.mdx
+No spelling errors found.
+No punctuation errors found.
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/docs/page.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭────────────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────╮
+│ Original                                                                       │ Corrected                                                                     │ Explanation                                       │
+├────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────┤
+│ You can show a description that shows directly under the title with the        │ You can show a description directly under the title with the                  │ Removed redundant phrase 'shows' for conciseness. │
+│ `description` metadata.                                                        │ `description` metadata.                                                       │                                                   │
+│                                                                                │                                                                               │                                                   │
+│ Want an icon for your sidebar item like the ones in                            │ Want an icon for your sidebar item like the ones in                           │ 'us' corrected to 'use' for proper usage.         │
+│ (/content/components/accordions)? You can set an `icon` attribute in           │ (/content/components/accordions)? You can set an `icon` attribute in          │                                                   │
+│ the metadata! All icons from [Font Awesome](https://fontawesome.com/icons) are │ the metadata! All icons from [Font Awesome](https://fontawesome.com/icons)    │                                                   │
+│ available for us. You can also set an icon type (optional). If not set, the    │ are                                                                           │                                                   │
+│ icon                                                                           │ available for use. You can also set an icon type (optional). If not set, the  │                                                   │
+│ type will be regular.                                                          │ icon                                                                          │                                                   │
+│                                                                                │ type will be regular.                                                         │                                                   │
+│                                                                                │                                                                               │                                                   │
+╰────────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/text.mdx
+No spelling errors found.
+                                                            Punctuation Corrections                                                            
+╭─────────────────────────────────┬───────────────────────────────────┬───────────────────────────────────────────────────────────────────────╮
+│ Original                        │ Corrected                         │ Explanation                                                           │
+├─────────────────────────────────┼───────────────────────────────────┼───────────────────────────────────────────────────────────────────────┤
+│ Best use to subsection headers. │ Best used for subsection headers. │ Changed 'Best use to' to 'Best used for' to maintain consistent tense │
+│                                 │                                   │                                                                       │
+╰─────────────────────────────────┴───────────────────────────────────┴───────────────────────────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/table.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ The Table component follows the official                             │ The `Table` component follows the official [Markdown                 │ Markdown should be capitalized as it's a proper noun, and Table      │
+│ (https://www.markdownguide.org/extended-syntax/#tables).             │ syntax](https://www.markdownguide.org/extended-syntax/#tables).      │ should be enclosed in backticks to indicate it is a code component.  │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/snippets/custom-subpath-gating.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Your primary domain (company.com) is hosted on Cloudflare and you    │ Your primary domain (company.com) is hosted on Cloudflare, and you   │ Added a comma before the conjunction 'and' to separate two           │
+│ are on the [Mintlify startup plan or                                 │ are on the [Mintlify Startup plan or                                 │ independent clauses. Capitalized 'Startup' because it is part of the │
+│ above](https://mintlify.com/pricing).                                │ above](https://mintlify.com/pricing).                                │ proper noun 'Mintlify Startup plan'.                                 │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/list-table.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ To create an ordered list, add line items with numbers followed by   │ To create an ordered list, add line items with numbers followed by   │ Added a period at the end of the sentence for proper punctuation.    │
+│ periods                                                              │ periods.                                                             │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ To create an unordered list, add dashes (`-`), asterisks (`*`), or   │ To create an unordered list, add dashes (`-`), asterisks (`*`), or   │ Added a period at the end of the sentence for proper punctuation.    │
+│ plus signs (`+`) in front of line items                              │ plus signs (`+`) in front of line items.                             │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Add indents on list items to nest them                               │ Add indents to list items to nest them.                              │ Rephrased for clarity and added a period at the end of the sentence  │
+│                                                                      │                                                                      │ for proper punctuation.                                              │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/reusable-snippets.mdx
+                                                                       Spelling Corrections                                                                        
+╭──────────────────────────────┬─────────────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Original                     │ Corrected                   │ Explanation                                                                                        │
+├──────────────────────────────┼─────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Lorem impsum dolor sit amet. │ Lorem ipsum dolor sit amet. │ The word 'impsum' is incorrectly spelled. It should be 'ipsum' as in 'Lorem ipsum dolor sit amet.' │
+│                              │                             │                                                                                                    │
+╰──────────────────────────────┴─────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────╯
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────╮
+│ Original                                                                   │ Corrected                                                                   │ Explanation                                             │
+├────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┤
+│ This is a principle that applies to documentation as well.                 │ This principle applies to documentation as well.                            │ Simplified the sentence removing redundant wording.     │
+│                                                                            │                                                                             │                                                         │
+│ If you find yourself repeating the same content in multiple places, you    │ If you find yourself repeating the same content in multiple places,         │ Removed 'you should' to make the sentence more concise. │
+│ should consider creating a custom snippet to keep your content in sync.    │ consider creating a custom snippet to keep your content in sync.            │                                                         │
+│                                                                            │                                                                             │                                                         │
+│ Optionally, you can add variables that can be filled in via props when you │ Optionally, add variables that can be filled in via props when you import   │ Removed 'you can' for conciseness and clarity.          │
+│ import the snippet.                                                        │ the snippet.                                                                │                                                         │
+│                                                                            │                                                                             │                                                         │
+╰────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/image-embeds.mdx
+                                                                          Spelling Corrections                                                                          
+╭───────────────┬───────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Original      │ Corrected     │ Explanation                                                                                                                          │
+├───────────────┼───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ accessability │ accessibility │ Correct spelling: 'accessibility' refers to how easily information can be accessed by all users, especially those with disabilities. │
+│               │               │                                                                                                                                      │
+╰───────────────┴───────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Mintlify supports files up to 5 MB.                                  │ Mintlify supports files up to 5MB.                                   │ Consistency in spacing, adhering to the convention of not separating │
+│                                                                      │                                                                      │ units of measure from their numerical values.                        │
+│                                                                      │                                                                      │                                                                      │
+│ To disable the default zoom on click for images, add the noZoom      │ To disable the default zoom-on-click for images, add the `noZoom`    │ Added hyphens to clarify 'zoom-on-click' and formatted 'noZoom' with │
+│ property to image embeds.                                            │ property to image embeds.                                            │ backticks to indicate code syntax.                                   │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ To get more customizability with images, you can also use embeds to  │ For greater customization with images, you can also use embeds to    │ Changed 'customizability' to 'customization' for better readability. │
+│ add images.                                                          │ add images.                                                          │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Since Mintlify needs to adhere to the JSX syntax, double word        │ Since Mintlify needs to adhere to the JSX syntax, double-word        │ Corrected 'double word’ to 'double-word' for grammatical accuracy    │
+│ attributes will need to be written in camelCase: autoPlay,           │ attributes must be written in camelCase: `autoPlay`, `playsInline`.  │ and formatted code attributes with backticks.                        │
+│ playsInline.                                                         │                                                                      │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/development.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ If you attempt to run Mintlify on a port that's already in use, it   │ If you attempt to run Mintlify on a port that is already in use, it  │ Replaced the contraction 'that's' with 'that is' to maintain         │
+│ will use the next available port:                                    │ will use the next available port:                                    │ consistency with formal documentation style.                         │
+│                                                                      │                                                                      │                                                                      │
+│ Please note that each CLI release is associated with a specific      │ Please note that each CLI release is associated with a specific      │ Changed period to a colon to align with the introductory nature of   │
+│ version of Mintlify.                                                 │ version of Mintlify:                                                 │ the sentence, which is followed by further explanation.              │
+│                                                                      │                                                                      │                                                                      │
+│ To identify any broken links, use the following command:             │ To identify any broken links, use the following command.             │ Replaced the colon with a period for consistency in ending a         │
+│                                                                      │                                                                      │ sentence.                                                            │
+│                                                                      │                                                                      │                                                                      │
+│ If you're a VSCode user, consider the [MDX VSCode                    │ If you are a VSCode user, consider the [MDX VSCode                   │ Replaced the contraction 'you're' with 'you are' to maintain         │
+│ extension](https://marketplace.visualstudio.com/items?itemName=unif… │ extension](https://marketplace.visualstudio.com/items?itemName=unif… │ consistency with formal documentation style.                         │
+│ for syntax highlighting, and                                         │ for syntax highlighting, and                                         │                                                                      │
+│ [Prettier](https://marketplace.visualstudio.com/items?itemName=esbe… │ [Prettier](https://marketplace.visualstudio.com/items?itemName=esbe… │                                                                      │
+│ for code formatting.                                                 │ for code formatting.                                                 │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Go to the root of your device and delete the `~/.mintlify` folder.   │ Navigate to the root directory of your device and delete the         │ Revised for clarity and consistency with formal documentation        │
+│                                                                      │ `~/.mintlify` folder.                                                │ language.                                                            │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/page.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Each page is an MDX file that should begin with the following        │ Each page is an MDX file that should begin with the following        │ Added a comma to separate the clause for clarity.                    │
+│ metadata syntax with `---` at the start and end:                     │ metadata syntax, with `---` at the start and end:                    │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Other metadata goes in between the same `---` lines. For example,    │ Other metadata goes in between the same `---` lines. For example,    │ Updated for clarity and consistency.                                 │
+│ this page uses this metadata:                                        │ this page uses the following metadata:                               │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ You can show a description that shows directly under the title with  │ You can display a description directly under the title with the      │ Updated for clarity and conciseness.                                 │
+│ the `description` metadata.                                          │ `description` metadata.                                              │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Want an icon for your sidebar item like the ones in                  │ Want an icon for your sidebar item like the ones in                  │ Replaced the exclamation mark and amended 'for us' to make the       │
+│ (/content/components/accordions)? You can set an `icon` attribute in │ (/content/components/accordions)? You can set an `icon` attribute in │ sentence more formally suitable.                                     │
+│ the metadata! All icons from [Font                                   │ the metadata. All icons from [Font                                   │                                                                      │
+│ Awesome](https://fontawesome.com/icons) are available for us.        │ Awesome](https://fontawesome.com/icons) are available for use.       │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Meta tags with colons need to be wrapped in quotes.                  │ Meta tags with colons must be wrapped in quotes.                     │ Changed 'need to be' to 'must be' for clarity.                       │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Learn more about API playgrounds in (/api-playground).               │ Learn more about API playgrounds in (/api-playground).               │ Added 'here' for better flow.                                        │
+│                                                                      │                                                                      │                                                                      │
+│ The Page Mode setting allows you to customize the appearance of your │ The Page Mode setting allows you to customize the appearance of your │ Changed 'the page will use the default settings' to 'the default     │
+│ page. You can choose from different modes to adjust the layout       │ page. You can choose from different modes to adjust the layout       │ settings will be applied' for consistency in voice.                  │
+│ according to your needs. If no mode is specified, the page will use  │ according to your needs. If no mode is specified, the default        │                                                                      │
+│ the default settings.                                                │ settings will be applied.                                            │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ This means the page will display with the default table of contents  │ This means the page will display the default table of contents (if   │ Changed 'with' to 'the' for better grammatical structure.            │
+│ (if headings are present) and other standard elements, providing a   │ headings are present) and other standard elements, providing a       │                                                                      │
+│ typical layout without any special adjustments.                      │ typical layout without any special adjustments.                      │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/quickstart.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Welcome! Follow the instructions below to learn how to deploy,       │ Welcome! Follow the instructions below to learn how to deploy,       │ Added a comma in the series to separate the items 'deploy',          │
+│ update and supercharge your documentation with Mintlify.             │ update, and supercharge your documentation with Mintlify.            │ 'update', and 'supercharge'.                                         │
+│                                                                      │                                                                      │                                                                      │
+│ To create your docs repo without logging into Github, follow these   │ To create your docs repo without logging into GitHub, follow these   │ Corrected the capitalization of 'GitHub'.                            │
+│ instructions:                                                        │ instructions:                                                        │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Mintlify docs are rendered from MDX files and configurations defined │ Mintlify docs are rendered from MDX files and configurations defined │ Corrected the capitalization of 'GitHub' and removed the comma       │
+│ in our (https://github.com/mintlify/starter). We use Github to       │ in our (https://github.com/mintlify/starter). We use GitHub to       │ before 'and make' for better readability.                            │
+│ integrate your docs with your code, and make source control          │ integrate your docs with your code and make source control           │                                                                      │
+│ effortless.                                                          │ effortless.                                                          │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ 1. Clone our (https://github.com/mintlify/starter) into a new public │ 1. Clone our (https://github.com/mintlify/starter) into a new public │ Replaced the abbreviation 'repo' with 'repository' for clarity.      │
+│ repo. You can make the repo private later.                           │ repo. You can make the repository private later.                     │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Upon successful installation, a check mark will appear next to the   │ Upon successful installation, a checkmark will appear next to the    │ Changed 'check mark' to 'checkmark' for usage consistency.           │
+│ commit hash of the repository.                                       │ commit hash of the repository.                                       │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ We provide a white-glove migration service as part of our Enterprise │ We provide a white-glove migration service as part of our Enterprise │ Capitalized 'Plan' to maintain consistency in referring to the       │
+│ plan.                                                                │ Plan.                                                                │ 'Enterprise Plan'.                                                   │
+│                                                                      │                                                                      │                                                                      │
+│ 3. Once git is installed, clone your docs repository using `git      │ 3. Once Git is installed, clone your docs repository using `git      │ Capitalized 'Git', a proper noun.                                    │
+│ clone <your-repo>`. If you haven't set it up yet, now would be a     │ clone <your-repo>`. If you haven't set it up yet, now would be a     │                                                                      │
+│ good time to do so with these [SSH                                   │ good time to do so with these [SSH                                   │                                                                      │
+│ keys](https://docs.github.com/en/authentication/connecting-to-githu… │ keys](https://docs.github.com/en/authentication/connecting-to-githu… │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ > We also support a mono-rep setup, allowing you to add our starter  │ > We also support a monorepo setup, allowing you to add our starter  │ Corrected the compound word 'monorepo' and replaced the abbreviation │
+│ template within a docs folder in your existing repo.                 │ template within a docs folder in your existing repository.           │ 'repo' with 'repository' for clarity.                                │
+│                                                                      │                                                                      │                                                                      │
+│ A full list of supported configurations can be found                 │ A complete list of supported configurations can be found             │ 'Full' was corrected to 'complete' for better readability.           │
+│ (/settings/global).                                                  │ (/settings/global).                                                  │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ For a complete guide on using Mintlify with OpenAPI, check out       │ For a comprehensive guide on using Mintlify with OpenAPI, check out  │ Replaced 'complete' with 'comprehensive' to avoid repetition and     │
+│ (/api-playground/openapi/setup). [This                               │ (/api-playground/openapi/setup). [This                               │ enhance clarity.                                                     │
+│ guide](/api-playground/openapi/writing-openapi) explains how to      │ guide](/api-playground/openapi/writing-openapi) explains how to      │                                                                      │
+│ configure your API authentication methods.                           │ configure your API authentication methods.                           │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/code.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Use                                                                  │ Use                                                                  │ Corrected the verb tense for consistency. 'follow' was changed to    │
+│ (https://www.markdownguide.org/extended-syntax/#fenced-code-blocks)  │ (https://www.markdownguide.org/extended-syntax/#fenced-code-blocks)  │ 'following'.                                                         │
+│ by enclosing code in three backticks and follow the leading ticks    │ by enclosing code in three backticks and following the leading ticks │                                                                      │
+│ with the programming language of your snippet to get syntax          │ with the programming language of your snippet to get syntax          │                                                                      │
+│ highlighting.                                                        │ highlighting.                                                        │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Optionally, you can also write the name of your code after the       │ Optionally, you can also specify the name of your code file after    │ Improved clarity by specifying 'name of your code file'.             │
+│ programming language.                                                │ the programming language.                                            │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/snippets/custom-subpath-gating.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Your primary domain (company.com) is hosted on Cloudflare and you    │ Your primary domain (company.com) is hosted on Cloudflare, and you   │ Added a comma before the conjunction 'and' to separate clauses       │
+│ are on the                                                           │ are on the                                                           │ properly.                                                            │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/reusable-snippets.mdx
+                                             Spelling Corrections                                              
+╭──────────────────────────────┬─────────────────────────────┬────────────────────────────────────────────────╮
+│ Original                     │ Corrected                   │ Explanation                                    │
+├──────────────────────────────┼─────────────────────────────┼────────────────────────────────────────────────┤
+│ Lorem impsum dolor sit amet. │ Lorem ipsum dolor sit amet. │ Corrected the spelling of 'impsum' to 'ipsum'. │
+│                              │                             │                                                │
+╰──────────────────────────────┴─────────────────────────────┴────────────────────────────────────────────────╯
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────╮
+│ Original                                                                         │ Corrected                                                                        │ Explanation                                  │
+├──────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ For client-side content loading, ensure to verify the `document` object's        │ For client-side content loading, ensure to verify the availability of the        │ Improved clarity by rephrasing the sentence. │
+│ availability before initiating the rendering process.                            │ `document` object before initiating the rendering process.                       │                                              │
+│                                                                                  │                                                                                  │                                              │
+╰──────────────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/code.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Optionally, you can also write the name of your code after the       │ Optionally, you can also specify the name of your code file after    │ Changed 'write' to 'specify' and clarified that it refers to the     │
+│ programming language.                                                │ the programming language.                                            │ code file name.                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Visit the [Code Block page](/content/components/code) for more       │ Visit the [Code Block page](/content/components/code) for more       │ Changed 'docs' to 'documentation' for formality and clarity.         │
+│ detailed docs.                                                       │ detailed documentation.                                              │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/table.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭───────────────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────╮
+│ Original                                                                          │ Corrected                                                                        │ Explanation                                 │
+├───────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────┤
+│ To add a table, use three or more hyphens (`---`) to create each column's header, │ To add a table, use three or more hyphens (`---`) to create each column's header │ Removed the unnecessary comma before 'and'. │
+│ and use pipes (`|`) to separate each column.                                      │ and use pipes (`|`) to separate each column.                                     │                                             │
+│                                                                                   │                                                                                  │                                             │
+╰───────────────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ To add a table, use three or more hyphens (`---`) to create each     │ To add a table, use three or more hyphens (`---`) to create each     │ Corrected the punctuation for better readability by removing the     │
+│ column's header, and use pipes (`|`) to separate each column. For    │ column's header and use pipes (`|`) to separate each column. For     │ comma before 'and'.                                                  │
+│ compatibility, you should also add a pipe on either end of the row.  │ compatibility, you should also add a pipe on either end of the row.  │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/development.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                     Grammar Corrections                                                                                     
+╭────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────╮
+│ Original                                                           │ Corrected                                                             │ Explanation                                  │
+├────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────┤
+│ This may be due to an outdated version of node. Try the following: │ This may be due to an outdated version of Node.js. Try the following: │ Capitalization and proper naming of Node.js. │
+│                                                                    │                                                                       │                                              │
+╰────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/quickstart.mdx
+No spelling errors found.
+                                                                               Punctuation Corrections                                                                               
+╭─────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────────┬────────────────────────────────╮
+│ Original                                                                │ Corrected                                                              │ Explanation                    │
+├─────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────┼────────────────────────────────┤
+│ integrate your docs with your code, and make source control effortless. │ integrate your docs with your code and make source control effortless. │ Removed the unnecessary comma. │
+│                                                                         │                                                                        │                                │
+╰─────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────┴────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Once git is installed, clone your docs repository using `git clone   │ Once `git` is installed, clone your docs repository using `git clone │ Changed 'now would be a good time' to 'now is a good time' for       │
+│ <your-repo>`. If you haven't set it up yet, now would be a good time │ <your-repo>`. If you haven't set it up yet, now is a good time to do │ concise language and added backticks around `git` for clarity and    │
+│ to do so with these [SSH                                             │ so with these [SSH                                                   │ format consistency.                                                  │
+│ keys](https://docs.github.com/en/authentication/connecting-to-githu… │ keys](https://docs.github.com/en/authentication/connecting-to-githu… │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ The mono-repo setup eliminates the need for creating a new repo.     │ The monorepo setup eliminates the need for creating a new repo.      │ Changed 'mono-repo' to 'monorepo' for consistency with common        │
+│                                                                      │                                                                      │ terminology.                                                         │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/list-table.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭───────────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────╮
+│ Original                                                                      │ Corrected                                                                     │ Explanation                                        │
+├───────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────┤
+│ To create an ordered list, add line items with numbers followed by periods    │ To create an ordered list, add line items with numbers followed by periods.   │ Added a missing period at the end of the sentence. │
+│                                                                               │                                                                               │                                                    │
+│ To create an unordered list, add dashes (`-`), asterisks (`*`), or plus signs │ To create an unordered list, add dashes (`-`), asterisks (`*`), or plus signs │ Added a missing period at the end of the sentence. │
+│ (`+`) in front of line items                                                  │ (`+`) in front of line items.                                                 │                                                    │
+│                                                                               │                                                                               │                                                    │
+│ Add indents on list items to nest them                                        │ Add indents on list items to nest them.                                       │ Added a missing period at the end of the sentence. │
+│                                                                               │                                                                               │                                                    │
+╰───────────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭───────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────╮
+│ Original                                                              │ Corrected                                                              │ Explanation                                                       │
+├───────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────┤
+│ Lists follow the official                                             │ Lists follow the official [Markdown                                    │ The word 'Markdown' should be capitalized as it is a proper noun. │
+│ (https://www.markdownguide.org/basic-syntax/#lists-1).                │ syntax](https://www.markdownguide.org/basic-syntax/#lists-1).          │                                                                   │
+│                                                                       │                                                                        │                                                                   │
+│ The Table component follows the official                              │ The table component follows the official [Markdown                     │ The word 'Markdown' should be capitalized as it is a proper noun. │
+│ (https://www.markdownguide.org/extended-syntax/#tables).              │ syntax](https://www.markdownguide.org/extended-syntax/#tables).        │                                                                   │
+│                                                                       │                                                                        │                                                                   │
+╰───────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/text.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Best use to subsection headers.                                      │ Best used for subsection headers.                                    │ Corrected to proper past participle for a consistent tense           │
+│                                                                      │                                                                      │ structure.                                                           │
+│                                                                      │                                                                      │                                                                      │
+│ Each **title** and **subtitle** creates an anchor and also shows up  │ Each **title** and **subtitle** create an anchor and also show up on │ Adjusted to proper subject-verb agreement.                           │
+│ on the table of contents on the right.                               │ the table of contents on the right.                                  │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ add a `>`                                                            │ Add a `>`                                                            │ Capitalized the first word of the sentence.                          │
+│                                                                      │                                                                      │                                                                      │
+│ add `<sup>` or `<sub>`                                               │ Add `<sup>` or `<sub>`                                               │ Capitalized the first word of the sentence.                          │
+│                                                                      │                                                                      │                                                                      │
+│ Mintlify supports in-line [LaTeX](https://www.latex-project.org) by  │ Mintlify supports inline [LaTeX](https://www.latex-project.org) by   │ Removed unnecessary escape characters and added a more concise       │
+│ surrounding your LaTeX code with dollar signs \$\).                  │ surrounding your LaTeX code with dollar signs ($).                   │ explanation closing parenthesis.                                     │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/page.mdx
+                                                                                                 Spelling Corrections                                                                                                 
+╭─────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────╮
+│ Original                                                            │ Corrected                                                            │ Explanation                                                           │
+├─────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┤
+│ [Font Awesome](https://fontawesome.com/icons) are available for us. │ [Font Awesome](https://fontawesome.com/icons) are available for use. │ 'for us' was changed to 'for use' to correct the grammatical error    │
+│                                                                     │                                                                      │ and make the sentence clearer.                                        │
+│                                                                     │                                                                      │                                                                       │
+╰─────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────╯
+                                             Punctuation Corrections                                             
+╭────────────┬──────────────┬───────────────────────────────────────────────────────────────────────────────────╮
+│ Original   │ Corrected    │ Explanation                                                                       │
+├────────────┼──────────────┼───────────────────────────────────────────────────────────────────────────────────┤
+│ code_block │ `code_block` │ Code-specific terms must be enclosed in backticks for proper Markdown formatting. │
+│            │              │                                                                                   │
+╰────────────┴──────────────┴───────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Each page is an MDX file that should begin with the following        │ Each page is an MDX file that should begin with the following        │ Added a comma for clarity and to correct the run-on sentence.        │
+│ metadata syntax with `---` at the start and end:                     │ metadata syntax, with `---` at the start and end:                    │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Other metadata goes in between the same `---` lines.                 │ Other metadata goes between the same `---` lines.                    │ Simplified 'in between' to 'between' for conciseness and grammatical │
+│                                                                      │                                                                      │ accuracy.                                                            │
+│                                                                      │                                                                      │                                                                      │
+│ You can show a description that shows directly under the title with  │ You can show a description directly under the title with the         │ Removed redundancy in 'a description that shows'.                    │
+│ the `description` metadata.                                          │ `description` metadata.                                              │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ You can also set an icon type (optional). If not set, the icon type  │ You can also set an icon type (optional). If not set, the icon type  │ Enclosed 'regular' in quotes to denote it as a specific value.       │
+│ will be regular.                                                     │ will be 'regular'.                                                   │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ In *Wide Mode*, you can hide the table of contents (ToC) on the      │ In *Wide Mode*, you can hide the table of contents (ToC) on the      │ Added a comma after 'any headings' for grammatical accuracy.         │
+│ right side of the page. This is particularly useful if your page     │ right side of the page. This is particularly useful if your page     │                                                                      │
+│ doesn’t have any headings or if you prefer...                        │ doesn’t have any headings, or if you prefer...                       │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Meta tags with colons need to be wrapped in quotes.                  │ Meta tags with colons need to be wrapped in quotation marks.         │ Changed 'quotes' to 'quotation marks' for precision.                 │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/image-embeds.mdx
+                                       Spelling Corrections                                        
+╭───────────────┬───────────────┬─────────────────────────────────────────────────────────────────╮
+│ Original      │ Corrected     │ Explanation                                                     │
+├───────────────┼───────────────┼─────────────────────────────────────────────────────────────────┤
+│ accessability │ accessibility │ Corrected the spelling from 'accessability' to 'accessibility'. │
+│               │               │                                                                 │
+╰───────────────┴───────────────┴─────────────────────────────────────────────────────────────────╯
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ The (https://www.markdownguide.org/basic-syntax/#images) lets you    │ The (https://www.markdownguide.org/basic-syntax/#images) lets you    │ Added a colon at the end of the sentence to introduce the code       │
+│ add images using the following code                                  │ add images using the following code:                                 │ block.                                                               │
+│                                                                      │                                                                      │                                                                      │
+│ For YouTube videos use:                                              │ For YouTube videos, use:                                             │ Added a comma to separate the clause correctly.                      │
+│                                                                      │                                                                      │                                                                      │
+│ For other videos use:                                                │ For other videos, use:                                               │ Added a comma to separate the clause correctly.                      │
+│                                                                      │                                                                      │                                                                      │
+│ To autoplay the video use:                                           │ To autoplay the video, use:                                          │ Added a comma to separate the clause correctly.                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Mintlify supports files up to 5 MB. To use larger files, consider a  │ Mintlify supports files up to 5 MB. To use larger files, consider    │ Improved clarity by explicitly stating the action to take with       │
+│ storage service like Cloudinary and embed in your Mintlify           │ using a storage service like Cloudinary and embedding them in your   │ larger files.                                                        │
+│ documentation.                                                       │ Mintlify documentation.                                              │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ The (https://www.markdownguide.org/basic-syntax/#images) lets you    │ The [Markdown                                                        │ Corrected capitalization for 'Markdown'.                             │
+│ add images using the following code:                                 │ syntax](https://www.markdownguide.org/basic-syntax/#images) lets you │                                                                      │
+│                                                                      │ add images using the following code:                                 │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ To disable the default zoom on click for images, add the noZoom      │ To disable the default zoom on images when clicked, add the noZoom   │ Rephrased for clarity and to specify the action when images are      │
+│ property to image embeds.                                            │ property to the image embeds.                                        │ clicked.                                                             │
+│                                                                      │                                                                      │                                                                      │
+│ To link an image, for example to create a button on your docs,       │ To link an image, for example, to create a button in your            │ Added comma and improved the sentence for clarity and correctness.   │
+│ encompass the image in a link with the `noZoom` property. Images in  │ documentation, wrap the image in a link with the `noZoom` property.  │                                                                      │
+│ `a` tags will automatically have a pointer cursor.                   │ Images in `a` tags will automatically have a pointer cursor.         │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ To use separate images for light and dark mode, use Tailwind CSS to  │ To use separate images for light and dark modes, use Tailwind CSS to │ Corrected 'mode' to 'modes' to reflect plural usage in context.      │
+│ hide and show images.                                                │ hide and show images.                                                │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Since Mintlify needs to adhere to the JSX syntax, double word        │ Since Mintlify adheres to JSX syntax, double-word attributes must be │ Improved sentence structure and consistency in instructions.         │
+│ attributes will need to be written in camelCase: autoPlay,           │ written in camelCase: `autoPlay`, `playsInline`.                     │                                                                      │
+│ playsInline.                                                         │                                                                      │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/reusable-snippets.mdx
+No spelling errors found.
+                                            Punctuation Corrections                                            
+╭──────────────────────────────┬─────────────────────────────┬────────────────────────────────────────────────╮
+│ Original                     │ Corrected                   │ Explanation                                    │
+├──────────────────────────────┼─────────────────────────────┼────────────────────────────────────────────────┤
+│ Lorem impsum dolor sit amet. │ Lorem ipsum dolor sit amet. │ Corrected the spelling of 'impsum' to 'ipsum'. │
+│                              │                             │                                                │
+╰──────────────────────────────┴─────────────────────────────┴────────────────────────────────────────────────╯
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/snippets/custom-subpath-gating.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭───────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────────────╮
+│ Original                                                  │ Corrected                                                                 │ Explanation                                                                │
+├───────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┤
+│ Your primary domain (company.com) is hosted on Cloudflare │ Your primary domain (company.com) is hosted on Cloudflare and you are on  │ Removed unnecessary newlines to improve readability and maintain proper    │
+│   and you are on the [Mintlify startup plan or            │ the [Mintlify startup plan or above](https://mintlify.com/pricing).       │ sentence structure.                                                        │
+│   above](https://mintlify.com/pricing).                   │                                                                           │                                                                            │
+│                                                           │                                                                           │                                                                            │
+╰───────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/text.mdx
+No spelling errors found.
+                                            Punctuation Corrections                                            
+╭─────────────────────────────────┬───────────────────────────────────┬───────────────────────────────────────╮
+│ Original                        │ Corrected                         │ Explanation                           │
+├─────────────────────────────────┼───────────────────────────────────┼───────────────────────────────────────┤
+│ Best use to subsection headers. │ Best used for subsection headers. │ Corrected verb tense for consistency. │
+│                                 │                                   │                                       │
+╰─────────────────────────────────┴───────────────────────────────────┴───────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────╮
+│ Original                                                                 │ Corrected                                                                │ Explanation                                                  │
+├──────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ Markdown syntax also recognizes a double enter in your MDX as a          │ Markdown syntax also recognizes a double enter in your MDX as a line     │ Corrected spacing for 'line break' to use the standard term. │
+│ linebreak.                                                               │ break.                                                                   │                                                              │
+│                                                                          │                                                                          │                                                              │
+╰──────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/code.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭─────────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────╮
+│ Original                                                                            │ Corrected                                                                           │ Explanation                            │
+├─────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────┤
+│ Optionally, you can also write the name of your code after the programming          │ Optionally, you can also write the name of your file after the programming          │ Changing 'code' to 'file' for clarity. │
+│ language.                                                                           │ language.                                                                           │                                        │
+│                                                                                     │                                                                                     │                                        │
+╰─────────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/quickstart.mdx
+No spelling errors found.
+                                                                            Punctuation Corrections                                                                             
+╭───────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────╮
+│ Original                                                  │ Corrected                                                  │ Explanation                                         │
+├───────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+│ start building modern documentation in under five minutes │ Start building modern documentation in under five minutes. │ Added a period at the end of the sentence.          │
+│                                                           │                                                            │                                                     │
+│ dashboard It's                                            │ dashboard. It's                                            │ Added a period to separate two independent clauses. │
+│                                                           │                                                            │                                                     │
+╰───────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────╯
+                                                                                               Grammar Corrections                                                                                               
+╭───────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                          │ Corrected                                                          │ Explanation                                                          │
+├───────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ to learn how to deploy, update and supercharge your documentation │ to learn how to deploy, update, and supercharge your documentation │ Added a serial comma for consistency and clarity in the list.        │
+│                                                                   │                                                                    │                                                                      │
+│ edited online: Here                                               │ editing online: Here                                               │ Changed 'edited' to 'editing' for parallel structure in the heading. │
+│                                                                   │                                                                    │                                                                      │
+╰───────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/table.mdx
+No spelling errors found.
+No punctuation errors found.
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ description: "Display an arrangement of data in rows and columns"    │ description: "Displays an arrangement of data in rows and columns"   │ Corrected to maintain consistent tense.                              │
+│                                                                      │                                                                      │                                                                      │
+│ Whether the user joined the community                                │ Indicates whether the user joined the community                      │ Clarified the description for better readability.                    │
+│                                                                      │                                                                      │                                                                      │
+│ The Table component follows the official                             │ The `Table` component follows the official [Markdown                 │ Ensured consistent use of technical terminology and proper           │
+│ (https://www.markdownguide.org/extended-syntax/#tables).             │ syntax](https://www.markdownguide.org/extended-syntax/#tables).      │ capitalization.                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ To add a table, use three or more hyphens (`---`) to create each     │ To add a table, use three or more hyphens (`---`) to create each     │ Removed the unnecessary comma for better readability.                │
+│ column's header, and use pipes (`|`) to separate each column. For    │ column's header and use pipes (`|`) to separate each column. For     │                                                                      │
+│ compatibility, you should also add a pipe on either end of the row.  │ compatibility, you should also add a pipe on either end of the row.  │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/development.mdx
+No spelling errors found.
+No punctuation errors found.
+No grammar errors found.
+
+File: https://github.com/mintlify/docs/blob/main/list-table.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭───────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────╮
+│ Original                                                              │ Corrected                                                              │ Explanation                                                       │
+├───────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────┤
+│ To create an ordered list, add line items with numbers followed by    │ To create an ordered list, add line items with numbers followed by     │ Added a period at the end of the sentence to correct punctuation. │
+│ periods                                                               │ periods.                                                               │                                                                   │
+│                                                                       │                                                                        │                                                                   │
+│ To create an unordered list, add dashes (`-`), asterisks (`*`), or    │ To create an unordered list, add dashes (`-`), asterisks (`*`), or     │ Added a period at the end of the sentence to correct punctuation. │
+│ plus signs (`+`) in front of line items                               │ plus signs (`+`) in front of line items.                               │                                                                   │
+│                                                                       │                                                                        │                                                                   │
+│ Add indents on list items to nest them                                │ Add indents on list items to nest them.                                │ Added a period at the end of the sentence to correct punctuation. │
+│                                                                       │                                                                        │                                                                   │
+│ To add a table, use three or more hyphens (`---`) to create each      │ To add a table, use three or more hyphens (`---`) to create each       │ Added a period at the end of the sentence to correct punctuation. │
+│ column's header, and use pipes (`|`) to separate each column          │ column's header, and use pipes (`|`) to separate each column.          │                                                                   │
+│                                                                       │                                                                        │                                                                   │
+╰───────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                 
+╭─────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────╮
+│ Original                                                                │ Corrected                                                                │ Explanation                                                  │
+├─────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ For compatibility, you should also add a pipe on either end of the row. │ For compatibility, you should also add a pipe on either end of each row. │ Changed 'the row' to 'each row' for clarity and correctness. │
+│                                                                         │                                                                          │                                                              │
+╰─────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/image-embeds.mdx
+No spelling errors found.
+                                   Punctuation Corrections                                    
+╭─────────────────────────┬──────────────────────────┬───────────────────────────────────────╮
+│ Original                │ Corrected                │ Explanation                           │
+├─────────────────────────┼──────────────────────────┼───────────────────────────────────────┤
+│ For YouTube videos use: │ For YouTube videos, use: │ Added a comma to improve readability. │
+│                         │                          │                                       │
+│ For other videos use:   │ For other videos, use:   │ Added a comma to improve readability. │
+│                         │                          │                                       │
+╰─────────────────────────┴──────────────────────────┴───────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Mintlify supports files up to 5 MB. To use larger files, consider a  │ Mintlify supports files up to 5 MB. To use larger files, consider a  │ Added 'them' for clarity.                                            │
+│ storage service like Cloudinary and embed in your Mintlify           │ storage service like Cloudinary and embed them in your Mintlify      │                                                                      │
+│ documentation.                                                       │ documentation.                                                       │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ The (https://www.markdownguide.org/basic-syntax/#images) lets you    │ The [Markdown                                                        │ Capitalized 'Markdown' and added a colon.                            │
+│ add images using the following code                                  │ syntax](https://www.markdownguide.org/basic-syntax/#images) lets you │                                                                      │
+│                                                                      │ add images using the following code:                                 │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Note that the image file size must be less than 5MB. Otherwise, we   │ Note that the image file size must be less than 5 MB. Otherwise, we  │ Added a space between '5' and 'MB' and clarified the sentence by     │
+│ recommend hosting on a service like                                  │ recommend hosting on a service like                                  │ specifying 'the URL and embed it.'                                   │
+│ [Cloudinary](https://cloudinary.com/) or                             │ [Cloudinary](https://cloudinary.com/) or                             │                                                                      │
+│ [S3](https://aws.amazon.com/s3/). You can then use that URL and      │ [S3](https://aws.amazon.com/s3/). You can then use the URL and embed │                                                                      │
+│ embed.                                                               │ it.                                                                  │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ To disable the default zoom on click for images, add the noZoom      │ To disable the default zoom on click for images, add the `noZoom`    │ Enclosed `noZoom` in backticks to follow markdown conventions.       │
+│ property to image embeds.                                            │ property to image embeds.                                            │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Mintlify supports [HTML tags in                                      │ Mintlify supports [HTML tags in                                      │ Added 'it' to clarify the sentence.                                  │
+│ Markdown](https://www.markdownguide.org/basic-syntax/#html). This is │ Markdown](https://www.markdownguide.org/basic-syntax/#html). This is │                                                                      │
+│ helpful if you prefer HTML tags to Markdown syntax, and lets you     │ helpful if you prefer HTML tags to Markdown syntax, and it lets you  │                                                                      │
+│ create documentation with infinite flexibility.                      │ create documentation with infinite flexibility.                      │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ alt and title attributes to images for better SEO and accessability. │ alt and title attributes to images for better SEO and accessibility. │ Corrected spelling of 'accessability' to 'accessibility.'            │
+│ Learn more at                                                        │ Learn more at                                                        │                                                                      │
+│ (https://yoast.com/image-seo-alt-tag-and-title-tag-optimization/).   │ (https://yoast.com/image-seo-alt-tag-and-title-tag-optimization/).   │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+
+File: https://github.com/mintlify/docs/blob/main/page.mdx
+No spelling errors found.
+                                                                                               Punctuation Corrections                                                                                                
+╭──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────╮
+│ Original                                                             │ Corrected                                                            │ Explanation                                                          │
+├──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+│ Each page is an MDX file that should begin with the following        │ Each page is an MDX file that should begin with the following        │ Added a comma for clarity and correct punctuation.                   │
+│ metadata syntax with `---` at the start and end:                     │ metadata syntax, with `---` at the start and end:                    │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ You can show a different title in the navigation with the            │ You can show a different title in the navigation with the            │ Added a comma to separate clauses for better readability.            │
+│ `sidebarTitle` metadata. This is useful if your title is long and    │ `sidebarTitle` metadata. This is useful if your title is long, and   │                                                                      │
+│ you want something shorter in the navigation links.                  │ you want something shorter in the navigation links.                  │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+│ Want an icon for your sidebar item like the ones in                  │ Want an icon for your sidebar item, like the ones in                 │ Added a comma for clarity and corrected 'for us' to 'for use' for    │
+│ (/content/components/accordions)? You can set an `icon` attribute in │ (/content/components/accordions)? You can set an `icon` attribute in │ grammatical accuracy.                                                │
+│ the metadata! All icons from [Font                                   │ the metadata! All icons from [Font                                   │                                                                      │
+│ Awesome](https://fontawesome.com/icons) are available for us.        │ Awesome](https://fontawesome.com/icons) are available for use.       │                                                                      │
+│                                                                      │                                                                      │                                                                      │
+╰──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────╯
+                                                                                                 Grammar Corrections                                                                                                  
+╭───────────────────────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────╮
+│ Original                                                                  │ Corrected                                                                 │ Explanation                                                │
+├───────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ Mintlify will use the name of the file if you forget to include a title.  │ Mintlify will use the file name if you forget to include a title.         │ Changed 'name of the file' to 'file name' for conciseness. │
+│                                                                           │                                                                           │                                                            │
+│ To create an API page, you must set an `api` or `openapi` property in the │ To create an API page, you must set an `api` or `openapi` property in the │ Added an apostrophe in 'page's' to indicate possession.    │
+│ page metadata.                                                            │ page's metadata.                                                          │                                                            │
+│                                                                           │                                                                           │                                                            │
+│ Meta tags with colons need to be wrapped in quotes.                       │ Meta tags with colons need to be wrapped in quotation marks.              │ Changed 'quotes' to 'quotation marks' for clarity.         │
+│                                                                           │                                                                           │                                                            │
+╰───────────────────────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────╯

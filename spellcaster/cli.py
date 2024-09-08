@@ -1,17 +1,16 @@
 import argparse
+import agentops
+from spellcaster.config import FILE_TYPES
+from spellcaster.traverse_repo import get_file_paths
+from spellcaster.grammar import check_grammar, validate_reasoning, display_results
+from spellcaster.github import clone_repository
 import concurrent.futures
 import os
 import shutil
 import tempfile
 from pathlib import Path
 
-import agentops
 from dotenv import load_dotenv
-
-from spellcaster.config import FILE_TYPES
-from spellcaster.github import clone_repository
-from spellcaster.grammar import check_grammar_with_claude, display_results
-from spellcaster.traverse_repo import get_file_paths
 
 load_dotenv()
 
@@ -32,17 +31,29 @@ def main():
         choices=["claude", "sonnet", "3.5", "gpt4o", "gpt4", "gpt3.5"],
         help="The LLM provider to use (optional)",
     )
+    # Add an argument to include a proper nouns string
+    parser.add_argument(
+        "-p",
+        "--proper_nouns",
+        type=str,
+        default="* Llama3.1-70B \n * Cerebras \n * Cohere \n * OpenAI \n * AgentOps \n * Spellcaster",
+        help="A string of proper nouns to include in the prompt (optional)",
+    )
 
     args = parser.parse_args()
 
     if args.url:
         current_dir = Path.cwd()
-        repo_name = args.url.split("/")[-1].replace(".git", "")
-        directory = current_dir / "spellcaster" / "samples" / repo_name
+        repo_name = args.url.rstrip('/').split("/")[-1].replace(".git", "")
+        org = args.url.rstrip('/').split("/")[-2]
+        print(repo_name)
+        directory = current_dir / "spellcaster" / "samples" / org / repo_name
+        print(f"Using directory: {directory}")
         if directory.exists():
             print(f"Repository already exists at {directory}")
         else:
             print(f"Cloning repository from {args.url}...")
+            directory.mkdir(parents=True, exist_ok=True)  # Ensure the directory is created
             clone_repository(args.url, str(directory))
             print(f"Repository cloned successfully to {directory}")
     elif args.directory:
@@ -54,33 +65,30 @@ def main():
     llm_provider = args.llm_provider
     print(f"Using LLM provider: {llm_provider}")
 
-    print(f"Scanning files in: {directory}")
     file_paths = get_file_paths(directory, FILE_TYPES)
     print(f"Found {len(file_paths)} files to scan")
 
     print("Starting grammar check...")
 
-    agentops.init(os.environ.get("AGENTOPS_API_KEY"), tags=["spellcaster", 'agentops', 'Cerebras', 'Llama3.1-70B'])
+    agentops.init(os.environ.get("AGENTOPS_API_KEY"), tags=["spellcaster", 'cursor', 'Cerebras', 'gpt4o'])
     results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-        futures = [
-            executor.submit(check_grammar_with_claude, file_path)
-            for file_path in file_paths[:10]
-        ]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(check_grammar, file_path,
+                                   proper_nouns=args.proper_nouns)
+                   for file_path in file_paths]
         for i, future in enumerate(concurrent.futures.as_completed(futures), 1):
             result = future.result()
             results.append(result)
             print(f"Processed file {i}/{len(futures)}")
 
     print("\nGrammar check results:")
+
     for result in results:
-        display_results(result)
+        display_results(result, args.url)
 
     print("Grammar check completed.")
     agentops.end_session("Success")
 
 
-if __name__ == "__main__":
-    main()
 if __name__ == "__main__":
     main()

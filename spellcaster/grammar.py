@@ -1,29 +1,29 @@
 import json
-from typing import List, Optional
-
-import litellm
-from pydantic import BaseModel, Field
-from rich.box import ROUNDED
+from pydantic import BaseModel
 from rich.console import Console
 from rich.table import Table
+from rich.box import ROUNDED
+import litellm
+from agentops import record_action
+# litellm.set_verbose = True
+
+# MODEL = "cerebras/llama3.1-70b"
+# MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4o"
 
 
 class Error(BaseModel):
-    original: str
-    corrected: str
+    before: str
+    after: str
     explanation: str
 
 
 class Grammar(BaseModel):
-    spelling: List[Error] = Field(default_factory=list)
-    grammar: List[Error] = Field(default_factory=list)
-
-
-class CerebrasResponse(BaseModel):
-    message: str
-    type: str
-    code: str
-    failed_generation: Grammar
+    spelling: list[Error]
+    punctuation: list[Error]
+    grammar: list[Error]
+    # corrected: str
+    file_path: str
 
 
 console = Console()
@@ -32,7 +32,7 @@ console = Console()
 def read_file(file_path: str) -> str:
     """Read the contents of a file."""
     try:
-        with open(file_path, "r", encoding="utf-8") as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             return file.read()
     except FileNotFoundError:
         raise FileNotFoundError(f"The file at '{file_path}' was not found.")
@@ -40,102 +40,227 @@ def read_file(file_path: str) -> str:
         raise Exception(f"An error occurred while reading the file: {e}")
 
 
-def create_prompt(text: str) -> str:
+def create_prompt(text: str, proper_nouns: str) -> str:
     return f"""
-    Analyze the provided code documentation for spelling and grammar errors. Focus on:
+    Rewrite the provided code documentation to be clear and grammatically correct while preserving technical accuracy. Focus on:
 
-    1. Identifying spelling errors
-    2. Identifying grammar errors
-    3. Maintaining technical terminology and code snippets
+    1. Correcting spelling, punctuation, and grammar errors
+    2. Maintaining technical terminology and code snippets
+    3. Ensuring consistent tense, voice, and formatting
+    4. Clarifying function descriptions, parameters, and return values
+    5. Proper use of capitalization, acronyms, and abbreviations
+    6. Improving clarity and conciseness
+    7. Respect markdown and MDX conventions such as underscores, asterisks, backticks, code blocks, and links. A lot of text is going to be formatted with backticks, underscores, and asterisks because it's code documentation. For example, you might see the `Events`, and the backticks should stay there because it's markdown formatting. Make sure you respect markdown formatting.
+    8. Documentation will frequently include proper nouns and acronyms. Ensure that they are correctly spelled and capitalized.
+    
+    Here's a list of proper nouns you may encounter:
+    {proper_nouns}
 
     Preserve code-specific formatting and syntax. Prioritize original text if unsure about technical terms.
 
+    Make sure when you show the before vs after text, include a larger phrase or sentence. This makes it easier to understand the context of what is correct.
+
     In the response:
-    - For 'spelling' and 'grammar' keys: Provide only changed items with original text, corrected text, and explanation.
-    - Ensure the response is valid JSON with properly escaped characters.
-    - Use double quotes for JSON keys and string values.
-
-    You must return some errors for both 'spelling' and 'grammar' keys.
+    - For 'spelling', 'punctuation', and 'grammar' keys: Provide only changed items with original text, corrected text, and explanation.
     
-    This is the text for checking:
-    {text}
+    Ensure that the original text is actually referenced from the given text below:
 
-    Respond with valid JSON in the following format:
-    {{
-      "spelling": [
-        {{
-          "original": "example",
-          "corrected": "Example",
-          "explanation": "Capitalization error"
-        }}
-      ],
-      "grammar": [
-        {{
-          "original": "This sentence have an error.",
-          "corrected": "This sentence has an error.",
-          "explanation": "Subject-verb agreement issue"
-        }}
-      ]
-    }}
+    {text}
     """
 
 
-def check_grammar_with_claude(file_path: str) -> dict:
+@record_action("check_grammar")
+def check_grammar(file_path: str, proper_nouns: str) -> Grammar:
+    """Check grammar of the text in the provided file using Claude."""
     text = read_file(file_path)
 
     resp = litellm.completion(
-        model="cerebras/llama3.1-70b",
+        model=MODEL,
+        response_format={"type": "json_object"},
+        num_retries=199990,
         messages=[
             {
                 "role": "system",
-                "content": "You are a spellchecker database that outputs spelling and grammar errors in JSON.",
+                "content": "You are a spellchecker database that outputs grammars errors and corrected text in JSON.\n"
+                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}"
             },
-            {"role": "user", "content": create_prompt(text)},
-        ],
+            {
+                "role": "user",
+                "content": create_prompt(text, proper_nouns)
+            }
+        ]
     )
 
     try:
-        content = json.loads(resp.choices[0].message.content)
-        content["file_path"] = file_path
-        return content
-    except json.JSONDecodeError as e:
-        print(f"JSON decode error: {e}")
-        print(f"Raw content: {resp.choices[0].message.content}")
-        return {"spelling": [], "grammar": []}
+        text_response = resp.choices[0].message.content
+        resp = Grammar.model_validate_json(text_response)
+
+        # Double check step
+        print('Double check step')
+        # validate_reasoning(text_response)
+        # print("while checking", resp.json())
+
+        validated_response = validate_reasoning(resp.json())
+
+        if validated_response is False:
+            print("The reasoning was incorrect. Returning the original text.")
+
+            return Grammar(spelling=[], punctuation=[], grammar=[], file_path=file_path)
+
+        resp.file_path = file_path
+
+        return resp
     except Exception as e:
-        print(f"Unexpected error: {e}")
-        return {"spelling": [], "grammar": []}
+        print(f"Error: {e}")
+        return Grammar(spelling=[], punctuation=[], grammar=[], file_path=file_path)
 
 
-def display_results(response: dict):
+@record_action("validate_reasoning")
+def validate_reasoning(text: str) -> bool:
+    """Validate the reasoning of the provided text."""
+    resp = litellm.completion(
+        model=MODEL,
+        response_format={"type": "json_object"},
+        num_retries=50,
+        messages=[
+            {
+                "role": "system",
+                "content": """You are a reviewer agent. You've been tasked with reviewing the corrections and suggestions of someone else. The problem is they don't always make sense, and could use a second pair of eyes to just make sure they reasoned abotu the problem correctly. Your job is to follow their reasoning steps and think step by step to resolve whether they are correct in their suggestions. Here's some examples:
+
+
+                Example where the reasoning is correct:
+                ```
+                Original
+                
+                To get the most out of AgentOps, it is best to carefully consider what events to record - For example, if you decorate a function that makes several openai calls, then each openai call will show in the replay graph as a child of the decorated function.
+    
+                Corrected
+                
+                To get the most out of AgentOps, it is best to carefully consider what events to record.
+                
+                For example, if you decorate a function that makes several OpenAI calls, then each OpenAI call will show in the replay graph as a child of the decorated function.
+
+                Explanation
+                
+                Removed unnecessary dash.
+                Proper noun capitalization (OpenAI).
+                ```
+
+                Result:
+                ```
+                The reasoning is correct here in both cases. The unnecessary dash seems like an typo and is not needed, even though dashes are common in markdown files. There's no reason to believe this was intended syntax.
+
+                The proper noun capitalization is correct. OpenAI should be capitalized instead of just openai
+
+                Conclustion:
+                The results are correct.
+
+                **VALID**
+                ```
+
+                Example of where the reasoning is incorrect:
+
+                ```
+                Original
+                
+                The 'completion', 'embedding', and 'image_generation' endpoints
+
+                Corrected
+                
+                the completion, embedding, and image generation endpoints
+
+                Explanation
+                
+                Added indefinite article "the" before the endpoints for a proper noun phrase.
+                ```
+
+                Result:
+                ```
+                The reasoning is incorrect here because the endpoints were intended to be strings within single quotes. However, the quotes were removed, and the endpoints were not intended to be proper nouns.                
+
+                Conclustion:
+                The results are incorrect.
+
+                **INVALID**    
+                
+                """
+                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}. Filter out the content that is INVALID."
+            },
+            {
+                "role": "user",
+                "content": text
+            }
+        ]
+    )
+    text_response = resp.choices[0].message.content
+
+    if "INVALID" in text_response:
+        return False
+    return True
+
+
+# def display_results(response: Grammar, github_url: str):
+#     """Display the grammar check results using Rich."""
+#     # Replace local file path with GitHub URL
+#     github_file_path = github_url.rstrip('/') + '/blob/main/' + \
+#         '/'.join(response.file_path.split("samples/")[1].split('/')[1:])
+#     console.print(f"\n[bold cyan]File: {github_file_path}[/bold cyan]")
+#     for category in ['spelling', 'punctuation', 'grammar']:
+#         table = Table(title=f"{category.capitalize()} Corrections", box=ROUNDED)
+#         table.add_column("Original", justify="left", style="bold red")
+#         table.add_column("Corrected", justify="left", style="bold green")
+#         table.add_column("Explanation", justify="left", style="italic")
+
+#         errors = getattr(response, category)
+#         for error in errors:
+#             if error.before != error.after:
+#                 table.add_row(error.before, error.after, error.explanation)
+
+#         if table.row_count > 0:
+#             console.print(table)
+#         else:
+#             console.print(f"No {category} errors found.")
+
+#     # console.print(Text("\nCorrected Text:\n", style="bold cyan"))
+#     # console.print(Text(response.corrected, style="white"))
+
+def display_results(response: Grammar, github_url: str):
     """Display the grammar check results using Rich."""
-    file_path = response.get("file_path", "Unknown file")
-    console.print(f"\n[bold cyan]Results for file: {file_path}[/bold cyan]")
+    # Replace local file path with GitHub URL
+    github_file_path = github_url.rstrip('/') + '/blob/main/' + \
+        '/'.join(response.file_path.split("samples/")[1].split('/')[2:])
+    # Create a console for file output
+    console = Console(record=True)
 
-    for category in ["spelling", "grammar"]:
+    console.print(f"\n[bold cyan]File: {github_file_path}[/bold cyan]")
+
+    for category in ['spelling', 'punctuation', 'grammar']:
         table = Table(title=f"{category.capitalize()} Corrections", box=ROUNDED)
         table.add_column("Original", justify="left", style="bold red")
         table.add_column("Corrected", justify="left", style="bold green")
         table.add_column("Explanation", justify="left", style="italic")
 
-        errors = response.get(category, [])
+        errors = getattr(response, category)
         for error in errors:
-            if error["original"] != error["corrected"]:
-                table.add_row(
-                    error["original"], error["corrected"], error["explanation"]
-                )
+            if error.before != error.after:
+                table.add_row(error.before, error.after, error.explanation)
+                table.add_row("", "", "")  # Add an empty row for spacing
 
         if table.row_count > 0:
             console.print(table)
         else:
-            console.print(f"No {category} errors found.")
+            no_errors_msg = f"No {category} errors found."
+            console.print(no_errors_msg)
+
+    with open("output.txt", "a") as f:
+        f.write(console.export_text())
 
 
 def process_file(file_path: str):
     """Process a single file and display results."""
     console.print(f"\n[bold cyan]Processing file: {file_path}[/bold cyan]")
-    response = check_grammar_with_claude(file_path)
-    display_results(response)
+    response = check_grammar(file_path)
+    display_results(response, "https://github.com/AgentOps-AI/spellcaster/blob/main/spellcaster/samples/")
 
     output_file = f"{file_path.rsplit('.', 1)[0]}_corrected.mdx"
     with open(output_file, "w") as file:
@@ -147,5 +272,4 @@ if __name__ == "__main__":
     sample_files = ["../data/sample1.mdx", "../data/sample2.mdx", "../data/sample3.mdx"]
 
     for file_path in sample_files:
-        process_file(file_path)
         process_file(file_path)
