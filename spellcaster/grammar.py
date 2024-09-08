@@ -83,7 +83,10 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
         response_format={"type": "json_object"},
     )
 
-    return Grammar.model_validate_json(resp.choices[0].message.content)
+    try:
+        return Grammar.model_validate_json(resp.choices[0].message.content)
+    except Error:
+        return Grammar(spelling=[], punctuation=[], grammar=[], corrected=text)
 
 def display_results(response: Grammar):
     """Display the grammar check results using Rich."""
