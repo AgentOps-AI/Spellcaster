@@ -1,7 +1,3 @@
-Here is a README for your open-source project, **Spellcaster**:
-
----
-
 # Spellcaster
 
 **Spellcaster** is an open-source tool that leverages AI agents to enhance the quality of your codebase by scanning repositories for grammar, spelling, and code example errors in documentation files. It reads through your repository and identifies potential issues, helping you fix them with ease.
