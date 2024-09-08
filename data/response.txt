@@ -1,13 +1,13 @@
 # Speakeasy
 
 ## Description
-Automate your SDK usage snippets in the API playground.
+Automate your SDK usage snippets in the API playground
 
 You can integrate Speakeasy-generated code snippets from your SDKs directly into your Mintlify API reference documentation. SDK usage snippets are shown in the [interactive playground](https://mintlify.com/docs/api-playground/overview) of your Mintlify-powered documentation.
 
 ## Speakeasy SDK Repository Changes
 
-In your Speakeasy SDK repos, add the following to the `targets` section of your `.speakeasy/workflow.yaml` file to ensure code samples are automatically produced alongside SDK generations:
+In your Speakeasy SDK repositories, add the following to the `targets` section of your `.speakeasy/workflow.yaml` file to ensure code samples are automatically produced alongside SDK generations:
 
 ```yaml .speakeasy/workflow.yaml
 targets:
@@ -22,7 +22,7 @@ Code samples will be generated in the form of an [OpenAPI overlay file](https://
 
 ## Mintlify Docs Repository Changes
 
-The workflow files produced will automatically bundle your source OpenAPI spec and Speakeasy code samples into a single output file, `openapi.yaml`. Mintlify will use this output file when constructing your API reference.
+The workflow files produced will automatically bundle your source OpenAPI spec and Speakeasy code samples into a single output file, `openapi.yaml`. Mintlify will use this output file when constructing your API reference. 
 
 ### Interactive CLI Set Up
 
