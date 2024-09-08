@@ -15,8 +15,6 @@ load_dotenv()
 
 
 def main():
-    agentops.init(os.environ.get("AGENTOPS_API_KEY"))
-
     parser = argparse.ArgumentParser(
         description="Scan a directory or GitHub repository and optionally specify an LLM provider."
     )
@@ -40,7 +38,7 @@ def main():
     if args.url:
         current_dir = Path.cwd()
         repo_name = args.url.split("/")[-1].replace(".git", "")
-        directory = current_dir / "spellcaster" / "samples" /  repo_name
+        directory = current_dir / "spellcaster" / "samples" / repo_name
         if directory.exists():
             print(f"Repository already exists at {directory}")
         else:
@@ -61,6 +59,8 @@ def main():
     print(f"Found {len(file_paths)} files to scan")
 
     print("Starting grammar check...")
+
+    agentops.init(os.environ.get("AGENTOPS_API_KEY"), tags=["spellcaster", 'agentops', 'Cerebras', 'Llama3.1-70B'])
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(check_grammar_with_claude, file_path) for file_path in file_paths]

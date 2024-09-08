@@ -5,6 +5,7 @@ from rich.table import Table
 from rich.box import ROUNDED
 import litellm
 
+
 class Error(BaseModel):
     before: str
     after: str
@@ -58,7 +59,7 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
     text = read_file(file_path)
 
     resp = litellm.completion(
-        model="groq/llama3-8b-8192",
+        model="cerebras/llama3.1-70b",
         response_format={"type": "json_object"},
         messages=[
             {
