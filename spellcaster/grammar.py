@@ -88,7 +88,6 @@ def display_results(response: Grammar):
         
         errors = getattr(response, category)
         for error in errors:
-            # Only add the row if the original and corrected text are different
             if error.before != error.after:
                 table.add_row(error.before, error.after, error.explanation)
 
@@ -98,17 +97,14 @@ def display_results(response: Grammar):
         else:
             console.print(f"No {category} errors found.")
     
-    # Display corrected text
     console.print(Text("\nCorrected Text:\n", style="bold cyan"))
     console.print(Text(response.corrected, style="white"))
 
 if __name__ == "__main__":
-    file_path = "data/test.mdx"
+    file_path = "../data/test.mdx"
     response = check_grammar_with_claude(file_path)
     
-    # Print the results to the console
     display_results(response)
     
-    # Write the corrected text to a file
-    with open("data/response.txt", "w") as file:
+    with open("../data/response.txt", "w") as file:
         file.write(response.corrected)
