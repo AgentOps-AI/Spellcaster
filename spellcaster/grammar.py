@@ -234,6 +234,8 @@ def display_results(response: Grammar, github_url: str):
 
     console.print(f"\n[bold cyan]File: {github_file_path}[/bold cyan]")
 
+    total_errors = 0
+
     for category in ['spelling', 'punctuation', 'grammar']:
         table = Table(title=f"{category.capitalize()} Corrections", box=ROUNDED)
         table.add_column("Original", justify="left", style="bold red")
@@ -245,6 +247,7 @@ def display_results(response: Grammar, github_url: str):
             if error.before != error.after:
                 table.add_row(error.before, error.after, error.explanation)
                 table.add_row("", "", "")  # Add an empty row for spacing
+                total_errors += 1
 
         if table.row_count > 0:
             console.print(table)
@@ -252,8 +255,12 @@ def display_results(response: Grammar, github_url: str):
             no_errors_msg = f"No {category} errors found."
             console.print(no_errors_msg)
 
+    console.print(f"[bold red]Total errors found: {total_errors}[/bold red]")
+
     with open("output.txt", "a") as f:
         f.write(console.export_text())
+
+    return total_errors
 
 
 def process_file(file_path: str):

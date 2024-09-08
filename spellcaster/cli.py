@@ -9,10 +9,13 @@ import os
 import shutil
 import tempfile
 from pathlib import Path
+from rich.console import Console
 
 from dotenv import load_dotenv
 
 load_dotenv()
+
+console = Console()
 
 
 def main():
@@ -70,7 +73,7 @@ def main():
 
     print("Starting grammar check...")
 
-    agentops.init(os.environ.get("AGENTOPS_API_KEY"), tags=["spellcaster", 'cursor', 'Cerebras', 'gpt4o'])
+    agentops.init(os.environ.get("AGENTOPS_API_KEY"), default_tags=["spellcaster", 'cursor', 'Cerebras', 'gpt4o'])
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(check_grammar, file_path,
@@ -83,8 +86,12 @@ def main():
 
     print("\nGrammar check results:")
 
+    total = 0
     for result in results:
-        display_results(result, args.url)
+        errors = display_results(result, args.url)
+        total += errors
+
+    console.print(f"[bold red]Total errors in the docs found: {total}[/bold red]")
 
     print("Grammar check completed.")
     agentops.end_session("Success")
