@@ -1,4 +1,6 @@
+import os
 import argparse
+import agentops
 from spellcaster.config import FILE_TYPES
 from spellcaster.traverse_repo import get_file_paths
 from spellcaster.grammar import check_grammar_with_claude, display_results
@@ -8,7 +10,13 @@ import tempfile
 import shutil
 from pathlib import Path
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 def main():
+    agentops.init(os.environ.get("AGENTOPS_API_KEY"))
+
     parser = argparse.ArgumentParser(
         description="Scan a directory or GitHub repository and optionally specify an LLM provider."
     )
@@ -67,6 +75,8 @@ def main():
         display_results(result)
 
     print("Grammar check completed.")
+    agentops.end_session('Success')
+
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,5 @@
 import json
 from pydantic import BaseModel
-from dotenv import load_dotenv
 from rich.console import Console
 from rich.table import Table
 from rich.text import Text
@@ -12,12 +11,12 @@ from rich.box import ROUNDED
 from groq import Groq
 import os
 
-load_dotenv()
 
 class Error(BaseModel):
     before: str
     after: str
     explanation: str
+
 
 class Grammar(BaseModel):
     spelling: list[Error]
@@ -25,11 +24,13 @@ class Grammar(BaseModel):
     grammar: list[Error]
     corrected: str
 
+
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
 console = Console()
+
 
 def read_file(file_path: str) -> str:
     """Read the contents of a file."""
@@ -40,7 +41,7 @@ def read_file(file_path: str) -> str:
         raise FileNotFoundError(f"The file at '{file_path}' was not found.")
     except Exception as e:
         raise Exception(f"An error occurred while reading the file: {e}")
-    
+
 
 def create_prompt(text: str) -> str:
     return f"""
@@ -62,6 +63,7 @@ def create_prompt(text: str) -> str:
     {text}
     """
 
+
 def check_grammar_with_claude(file_path: str) -> Grammar:
     """Check grammar of the text in the provided file using Claude."""
     text = read_file(file_path)
@@ -70,7 +72,7 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
         model="llama-3.1-70b-versatile",
         max_tokens=8000,
         messages=[
-             {
+            {
                 "role": "system",
                 "content": "You are a spellchecker database that outputs grammars errors and corrected text in JSON.\n"
                 f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}",
@@ -88,6 +90,7 @@ def check_grammar_with_claude(file_path: str) -> Grammar:
     except Error:
         return Grammar(spelling=[], punctuation=[], grammar=[], corrected=text)
 
+
 def display_results(response: Grammar):
     """Display the grammar check results using Rich."""
     for category in ['spelling', 'punctuation', 'grammar']:
@@ -95,7 +98,7 @@ def display_results(response: Grammar):
         table.add_column("Original", justify="left", style="bold red")
         table.add_column("Corrected", justify="left", style="bold green")
         table.add_column("Explanation", justify="left", style="italic")
-        
+
         errors = getattr(response, category)
         for error in errors:
             if error.before != error.after:
@@ -105,23 +108,25 @@ def display_results(response: Grammar):
             console.print(table)
         else:
             console.print(f"No {category} errors found.")
-    
+
     console.print(Text("\nCorrected Text:\n", style="bold cyan"))
     console.print(Text(response.corrected, style="white"))
+
 
 def process_file(file_path: str):
     """Process a single file and display results."""
     console.print(f"\n[bold cyan]Processing file: {file_path}[/bold cyan]")
     response = check_grammar_with_claude(file_path)
     display_results(response)
-    
+
     output_file = f"{file_path.rsplit('.', 1)[0]}_corrected.mdx"
     with open(output_file, "w") as file:
         file.write(response.corrected)
     console.print(f"[green]Corrected text saved to: {output_file}[/green]")
 
+
 if __name__ == "__main__":
     sample_files = ["../data/sample1.mdx", "../data/sample2.mdx", "../data/sample3.mdx"]
-    
+
     for file_path in sample_files:
         process_file(file_path)

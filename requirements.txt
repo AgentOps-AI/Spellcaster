@@ -1,5 +1,0 @@
-instructor
-python-dotenv
-rich
-anthropic
-groq

@@ -19,7 +19,12 @@ classifiers = [
 dependencies = [
     "agentops==0.3.10",
     "tokencost==0.1.12",
-    "litellm==1.44.22"
+    "litellm==1.44.22",
+    "instructor",
+    "python-dotenv",
+    "rich",
+    "anthropic",
+    "groq"
 ]
 
 [project.urls]
