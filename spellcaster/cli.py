@@ -38,10 +38,9 @@ def main():
     args = parser.parse_args()
 
     if args.url:
-        data_dir = Path.home() / "data" / "spellcaster_repos"
-        data_dir.mkdir(parents=True, exist_ok=True)
+        current_dir = Path.cwd()
         repo_name = args.url.split("/")[-1].replace(".git", "")
-        directory = data_dir / repo_name
+        directory = current_dir / "samples" / repo_name
         if directory.exists():
             print(f"Repository already exists at {directory}")
         else:

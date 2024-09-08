@@ -1,0 +1,5 @@
+python-dotenv
+rich
+anthropic
+groq
+litellm
