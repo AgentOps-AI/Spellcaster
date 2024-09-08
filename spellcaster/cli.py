@@ -3,6 +3,8 @@ import argparse
 from spellcaster.config import FILE_TYPES
 from spellcaster.traverse_repo import get_file_paths
 
+from spellcaster.grammar_check import check_grammar_with_claude, display_results
+import concurrent.futures
 
 def main():
     parser = argparse.ArgumentParser(
@@ -27,14 +29,18 @@ def main():
 
     file_paths = get_file_paths(directory, FILE_TYPES)
 
-    # ... existing code ...
     print(f"Scanning directory: {directory}")
     print(f"Using LLM provider: {llm_provider}")
     print(f"Found {len(file_paths)} files in the directory:")
-    for path in file_paths:
-        print(path)
-    # ... existing code ...
 
+    results = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(check_grammar_with_claude, file_path) for file_path in file_paths]
+        for future in concurrent.futures.as_completed(futures):
+            results.append(future.result())
+
+    for result in results:
+        display_results(result)
 
 if __name__ == "__main__":
     main()
