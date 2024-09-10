@@ -21,8 +21,23 @@ Spellcaster is an open-source tool that leverages AI agents to enhance the quali
 1. Install package:
 
    ```bash
-   pip install Spellcaster
+   pip install spellcaster
    ```
+
+2. Set up environment variables:
+
+   Create a `.env` file in your project root and add the following variables:
+
+   ```
+   AGENTOPS_API_KEY=your_agentops_api_key
+   ANTHROPIC_API_KEY=your_anthropic_api_key
+   OPENAI_API_KEY=your_openai_api_key
+   GROQ_API_KEY=your_groq_api_key
+   ```
+
+Spellcaster uses AgentOps for cost and latency tracking. You can sign up for an API key [here](https://app.agentops.ai/).
+
+Replace `your_*_api_key` with your actual API keys for each service. The model can be selected in `config.py`. Spellcaster uses LiteLLM.
 
 ### Usage
 
@@ -31,49 +46,14 @@ To run Spellcaster on a directory:
 1. In your terminal, run the following command:
 
    ```bash
-   Spellcaster --url <path-to-your-repo-on-github>
+   spellcaster --url <path-to-your-repo-on-github>
    ```
 
 2. Spellcaster will analyze the directory and output any detected issues, along with suggestions for fixing them.
 
 ### Configuration
 
-You can customize Spellcaster’s behavior by adjusting the `pyproject.toml` file:
+You can customize Spellcaster's behavior by adjusting the `config.py` file:
 
-- Set file types to scan (e.g., `.md`, `.txt`, `.py`).
-- Define directories to include/exclude in the scan.
-- Enable/disable automatic fixes.
-
-## Contributing
-
-We welcome contributions! If you’d like to help improve Spellcaster:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-branch
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add your feature"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-branch
-   ```
-5. Open a pull request.
-
-### Development
-
-The four of us developeed Spellcaster at the DevTools Hackathon 2024 in SF.
-<a href="https://github.com/areibman/spellcaster/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=areibman/spellcaster" />
-</a>
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust this according to your preferences!
+- `FILE_TYPES`: A list of file extensions to scan. By default, it includes `.mdx` and `.md` files. You can add or remove file extensions as needed.
+- `MAX_FILES`: The maximum number of files to scan. By default, it's set to 500. You can change this number to suit your needs.

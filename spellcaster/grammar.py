@@ -5,11 +5,7 @@ from rich.table import Table
 from rich.box import ROUNDED
 import litellm
 from agentops import record_action
-# litellm.set_verbose = True
-
-# MODEL = "cerebras/llama3.1-70b"
-# MODEL = "gpt-3.5-turbo"
-MODEL = "gpt-4o"
+from config import MODEL
 
 
 class Error(BaseModel):

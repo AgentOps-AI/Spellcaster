@@ -2,12 +2,10 @@ import argparse
 import agentops
 from spellcaster.config import FILE_TYPES
 from spellcaster.traverse_repo import get_file_paths
-from spellcaster.grammar import check_grammar, validate_reasoning, display_results
+from spellcaster.grammar import check_grammar, display_results
 from spellcaster.github import clone_repository
 import concurrent.futures
 import os
-import shutil
-import tempfile
 from pathlib import Path
 from rich.console import Console
 

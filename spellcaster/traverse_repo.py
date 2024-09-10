@@ -4,7 +4,6 @@ from typing import List
 from spellcaster.config import MAX_FILES
 
 
-
 class GitHubFileLocator:
     def __init__(self, project_directory: str, file_types: List[str]):
         self.project_directory = project_directory
@@ -34,16 +33,3 @@ def get_file_paths(project_directory: str, file_types: List[str]) -> List[str]:
     """
     locator = GitHubFileLocator(project_directory, file_types)
     return locator.find_files()
-
-
-# # Example usage:
-# if __name__ == "__main__":
-#     project_dir = "/Users/benedictneo/usf/msds692"
-#     file_types = [".mdx", ".md"]  # Add or remove file extensions as needed
-
-#     file_paths = get_file_paths(project_dir, file_types)
-
-#     print(f"Found {len(file_paths)} files (max {MAX_FILES}):")
-#     for path in file_paths:
-#         print(path)    for path in file_paths:
-#         print(path)
