@@ -26,6 +26,8 @@ pip install spellcaster
 spellcaster -d /path/to/your/docs
 ```
 
+![Screenshot](assets/screenshot.png)
+
 
 ## 🦉 Features
 
