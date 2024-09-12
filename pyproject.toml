@@ -24,7 +24,8 @@ dependencies = [
     "rich",
     "anthropic",
     "groq",
-    "GitPython"
+    "GitPython",
+    "tenacity"
 ]
 
 [project.urls]

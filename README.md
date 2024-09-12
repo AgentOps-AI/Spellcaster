@@ -1,17 +1,33 @@
-# Spellcaster
-
 <p align="center">
   <img src="assets/spellcasterlogo.png" alt="Spellcaster Logo" width="300"/>
 </p>
 
-_AI-powered documentation and code quality enhancement for your repositories._
+<p align="center">
+  <em>AI-powered documentation and code quality enhancement for your repositories.</em>
+</p>
+
+
+<p align="center">
+<a href="https://twitter.com/agentopsai/">🐦 Twitter</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="https://discord.gg/a4VQ23Aps5">📢 Discord</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="https://agentops.ai/?spellcaster">🖇️ AgentOps</a>
+</p>
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Spellcaster is an open-source tool that leverages AI agents to enhance the quality of your codebase by scanning repositories for grammar, spelling, and code example errors in documentation files. It reads through your repository and identifies potential issues, helping you fix them with ease.
+Spellcaster is an open-source CLI tool that leverages AI agents to enhance the quality of your codebase by scanning repositories for grammar, spelling, and code example errors in documentation files. It reads through your repository and identifies potential issues, helping you fix them with ease.
 
-## Features
+To run Spellcaster:
+```bash
+pip install spellcaster
+spellcaster --url https://github.com/username/repo
+```
+
+
+## 🦉 Features
 
 * Grammar and Spelling Checks: Spellcaster reviews your documentation and comments to ensure they are clear, correct, and professional.
 * Comprehensive File Scanning: Spellcaster reads across multiple file formats (Markdown, plain text, etc.) to detect issues.
@@ -37,19 +53,39 @@ Spellcaster is an open-source tool that leverages AI agents to enhance the quali
 
 Spellcaster uses AgentOps for cost and latency tracking. You can sign up for an API key [here](https://app.agentops.ai/).
 
-Replace `your_*_api_key` with your actual API keys for each service. The model can be selected in `config.py`. Spellcaster uses LiteLLM.
+Replace `your_*_api_key` with your actual API keys for each service.
 
 ### Usage
 
-To run Spellcaster on a directory:
+To run Spellcaster:
 
-1. In your terminal, run the following command:
+1. In your terminal, use the following command structure:
 
    ```bash
-   spellcaster --url <path-to-your-repo-on-github>
+   spellcaster [options]
    ```
 
-2. Spellcaster will analyze the directory and output any detected issues, along with suggestions for fixing them.
+   Options:
+   - `-d`, `--directory`: The directory to scan
+   - `-u`, `--url`: The GitHub repository URL to clone and scan
+   - `-l`, `--llm_provider`: The LLM provider to use (choices: claude, sonnet, 3.5, gpt4o, gpt4, gpt3.5; default: MODEL from config)
+   - `-p`, `--proper_nouns`: A string of proper nouns to include in the prompt (default: "* Llama3.1-70B \n * Cerebras \n * Cohere \n * OpenAI \n * AgentOps \n * Spellcaster")
+   - `-f`, `--file_types`: File types to scan (default: from FILE_TYPES in config)
+   - `-m`, `--max_files`: Maximum number of files to scan (default: MAX_FILES from config)
+
+2. Examples:
+   
+   Scan a GitHub repository:
+   ```bash
+   spellcaster --url https://github.com/username/repo
+   ```
+
+   Scan a local directory with custom LLM provider:
+   ```bash
+   spellcaster --directory /path/to/your/docs --llm_provider gpt4
+   ```
+
+3. Spellcaster will analyze the specified directory or repository and output any detected issues, along with suggestions for fixing them.
 
 ### Configuration
 
@@ -57,3 +93,4 @@ You can customize Spellcaster's behavior by adjusting the `config.py` file:
 
 - `FILE_TYPES`: A list of file extensions to scan. By default, it includes `.mdx` and `.md` files. You can add or remove file extensions as needed.
 - `MAX_FILES`: The maximum number of files to scan. By default, it's set to 500. You can change this number to suit your needs.
+- `MODEL`: The default LLM provider to use.

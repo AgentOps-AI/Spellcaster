@@ -66,12 +66,12 @@ def create_prompt(text: str, proper_nouns: str) -> str:
 
 
 @record_action("check_grammar")
-def check_grammar(file_path: str, proper_nouns: str) -> Grammar:
+def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Grammar:
     """Check grammar of the text in the provided file using Claude."""
     text = read_file(file_path)
 
     resp = litellm.completion(
-        model=MODEL,
+        model=model,
         response_format={"type": "json_object"},
         num_retries=199990,
         messages=[
@@ -96,7 +96,7 @@ def check_grammar(file_path: str, proper_nouns: str) -> Grammar:
         # validate_reasoning(text_response)
         # print("while checking", resp.json())
 
-        validated_response = validate_reasoning(resp.json())
+        validated_response = validate_reasoning(resp.json(), model=model)
 
         if validated_response is False:
             print("The reasoning was incorrect. Returning the original text.")
@@ -112,10 +112,10 @@ def check_grammar(file_path: str, proper_nouns: str) -> Grammar:
 
 
 @record_action("validate_reasoning")
-def validate_reasoning(text: str) -> bool:
+def validate_reasoning(text: str, model: str = MODEL) -> bool:
     """Validate the reasoning of the provided text."""
     resp = litellm.completion(
-        model=MODEL,
+        model=model,
         response_format={"type": "json_object"},
         num_retries=50,
         messages=[
@@ -259,10 +259,10 @@ def display_results(response: Grammar, github_url: str):
     return total_errors
 
 
-def process_file(file_path: str):
+def process_file(file_path: str, model: str = MODEL):
     """Process a single file and display results."""
     console.print(f"\n[bold cyan]Processing file: {file_path}[/bold cyan]")
-    response = check_grammar(file_path)
+    response = check_grammar(file_path, model)
     display_results(response, "https://github.com/AgentOps-AI/spellcaster/blob/main/spellcaster/samples/")
 
     output_file = f"{file_path.rsplit('.', 1)[0]}_corrected.mdx"

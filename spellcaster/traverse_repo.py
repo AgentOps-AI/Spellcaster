@@ -5,9 +5,10 @@ from spellcaster.config import MAX_FILES
 
 
 class GitHubFileLocator:
-    def __init__(self, project_directory: str, file_types: List[str]):
+    def __init__(self, project_directory: str, file_types: List[str], max_files: int = MAX_FILES):
         self.project_directory = project_directory
         self.file_types = file_types
+        self.max_files = max_files
 
     def find_files(self) -> List[str]:
         """
@@ -21,15 +22,15 @@ class GitHubFileLocator:
                 file_extension = os.path.splitext(file)[1].lower()
                 if file_extension in allowed_extensions:
                     files_to_process.append(os.path.join(root, file))
-                    if len(files_to_process) >= MAX_FILES:
-                        return files_to_process[:MAX_FILES]
+                    if len(files_to_process) >= self.max_files:
+                        return files_to_process[:self.max_files]
 
-        return files_to_process[:MAX_FILES]
+        return files_to_process[:self.max_files]
 
 
-def get_file_paths(project_directory: str, file_types: List[str]) -> List[str]:
+def get_file_paths(project_directory: str, file_types: List[str],  max_files: int = MAX_FILES) -> List[str]:
     """
     Main function to get file paths based on the file types, capped at MAX_FILES.
     """
-    locator = GitHubFileLocator(project_directory, file_types)
+    locator = GitHubFileLocator(project_directory, file_types, max_files)
     return locator.find_files()

@@ -1,6 +1,6 @@
 import argparse
 import agentops
-from spellcaster.config import FILE_TYPES
+from spellcaster.config import FILE_TYPES, MAX_FILES, MODEL
 from spellcaster.traverse_repo import get_file_paths
 from spellcaster.grammar import check_grammar, display_results
 from spellcaster.github import clone_repository
@@ -28,17 +28,30 @@ def main():
         "-l",
         "--llm_provider",
         type=str,
-        default="default_provider",
+        default=MODEL,
         choices=["claude", "sonnet", "3.5", "gpt4o", "gpt4", "gpt3.5"],
         help="The LLM provider to use (optional)",
     )
-    # Add an argument to include a proper nouns string
     parser.add_argument(
         "-p",
         "--proper_nouns",
         type=str,
         default="* Llama3.1-70B \n * Cerebras \n * Cohere \n * OpenAI \n * AgentOps \n * Spellcaster",
         help="A string of proper nouns to include in the prompt (optional)",
+    )
+    parser.add_argument(
+        "-f",
+        "--file_types",
+        nargs="+",
+        default=FILE_TYPES,
+        help="File types to scan (default: %(default)s)",
+    )
+    parser.add_argument(
+        "-m",
+        "--max_files",
+        type=int,
+        default=MAX_FILES,
+        help="Maximum number of files to scan (default: %(default)s)",
     )
 
     args = parser.parse_args()
@@ -66,7 +79,7 @@ def main():
     llm_provider = args.llm_provider
     print(f"Using LLM provider: {llm_provider}")
 
-    file_paths = get_file_paths(directory, FILE_TYPES)
+    file_paths = get_file_paths(directory, args.file_types, args.max_files)
     print(f"Found {len(file_paths)} files to scan")
 
     print("Starting grammar check...")
@@ -75,7 +88,8 @@ def main():
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(check_grammar, file_path,
-                                   proper_nouns=args.proper_nouns)
+                                   proper_nouns=args.proper_nouns,
+                                   model=llm_provider)
                    for file_path in file_paths]
         for i, future in enumerate(concurrent.futures.as_completed(futures), 1):
             result = future.result()
