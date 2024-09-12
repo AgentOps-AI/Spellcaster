@@ -40,3 +40,8 @@ spellcaster = "spellcaster.cli:main"
 
 [project.entry-points.console_scripts]
 spellcaster = "spellcaster.cli:main"
+
+# Add this section to explicitly specify the packages
+[tool.setuptools.packages.find]
+include = ["spellcaster*"]
+exclude = ["assets*", "samples*"]
