@@ -23,7 +23,7 @@ Spellcaster is an open-source CLI tool that leverages AI agents to enhance the q
 To run Spellcaster:
 ```bash
 pip install spellcaster
-spellcaster --url https://github.com/username/repo
+spellcaster -d /path/to/your/docs
 ```
 
 
@@ -74,15 +74,15 @@ To run Spellcaster:
    - `-m`, `--max_files`: Maximum number of files to scan (default: MAX_FILES from config)
 
 2. Examples:
-   
-   Scan a GitHub repository:
-   ```bash
-   spellcaster --url https://github.com/username/repo
-   ```
 
    Scan a local directory with custom LLM provider:
    ```bash
    spellcaster --directory /path/to/your/docs --llm_provider gpt4
+   ```
+   
+   Scan a GitHub repository:
+   ```bash
+   spellcaster --url https://github.com/username/repo
    ```
 
 3. Spellcaster will analyze the specified directory or repository and output any detected issues, along with suggestions for fixing them.

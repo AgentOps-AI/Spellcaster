@@ -20,39 +20,31 @@ def main():
     parser = argparse.ArgumentParser(
         description="Scan a directory or GitHub repository and optionally specify an LLM provider."
     )
-    parser.add_argument("-d", "--directory", type=str, help="The directory to scan")
-    parser.add_argument(
-        "-u", "--url", type=str, help="The GitHub repository URL to clone and scan"
-    )
-    parser.add_argument(
-        "-l",
-        "--llm_provider",
-        type=str,
-        default=MODEL,
-        choices=["claude", "sonnet", "3.5", "gpt4o", "gpt4", "gpt3.5"],
-        help="The LLM provider to use (optional)",
-    )
-    parser.add_argument(
-        "-p",
-        "--proper_nouns",
-        type=str,
-        default="* Llama3.1-70B \n * Cerebras \n * Cohere \n * OpenAI \n * AgentOps \n * Spellcaster",
-        help="A string of proper nouns to include in the prompt (optional)",
-    )
-    parser.add_argument(
-        "-f",
-        "--file_types",
-        nargs="+",
-        default=FILE_TYPES,
-        help="File types to scan (default: %(default)s)",
-    )
-    parser.add_argument(
-        "-m",
-        "--max_files",
-        type=int,
-        default=MAX_FILES,
-        help="Maximum number of files to scan (default: %(default)s)",
-    )
+    parser.add_argument("-d", "--directory",
+                        type=str, help="The directory to scan")
+    parser.add_argument("-u", "--url",
+                        type=str, help="The GitHub repository URL to clone and scan")
+    parser.add_argument("-l", "--llm_provider",
+                        type=str,
+                        default=MODEL,
+                        choices=["claude", "sonnet", "3.5", "gpt4o", "gpt4", "gpt3.5"],
+                        help="The LLM provider to use (optional)",
+                        )
+    parser.add_argument("-p", "--proper_nouns",
+                        type=str,
+                        default="* Llama3.1-70B \n * Cerebras \n * Cohere \n * OpenAI \n * AgentOps \n * Spellcaster",
+                        help="A string of proper nouns to include in the prompt (optional)",
+                        )
+    parser.add_argument("-f", "--file_types",
+                        nargs="+",
+                        default=FILE_TYPES,
+                        help="File types to scan (default: %(default)s)",
+                        )
+    parser.add_argument("-m", "--max_files",
+                        type=int,
+                        default=MAX_FILES,
+                        help="Maximum number of files to scan (default: %(default)s)",
+                        )
 
     args = parser.parse_args()
 
