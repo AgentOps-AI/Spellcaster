@@ -111,8 +111,7 @@ def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Gram
         return Grammar(spelling=[], punctuation=[], grammar=[], file_path=file_path)
 
 
-# @record_action("validate_reasoning")
-@observe()
+@record_action("validate_reasoning")
 def validate_reasoning(text: str, model: str = MODEL) -> bool:
     """Validate the reasoning of the provided text."""
     resp = litellm.completion(
