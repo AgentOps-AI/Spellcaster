@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <em>AI-powered documentation and code quality enhancement for your repositories.</em>
+  <em>AI spelling and grammar checker for documentation</em>
 </p>
 
 
@@ -18,12 +18,19 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Spellcaster is an open-source CLI tool that leverages AI agents to enhance the quality of your codebase by scanning repositories for grammar, spelling, and code example errors in documentation files. It reads through your repository and identifies potential issues, helping you fix them with ease.
+Spellcaster is an open-source CLI tool that uses AI to improve your codebase's documentation. It scans repositories for:
+
+- Grammar errors
+- Spelling mistakes
+- Issues in code examples
+
+Spellcaster helps identify potential problems to help you write clear, concise, and professional documentation.
+
 
 To run Spellcaster:
 ```bash
 pip install spellcaster
-spellcaster -d /path/to/your/docs
+spellcaster -d /path/to/your/docs/directory/
 ```
 
 ![Screenshot](assets/screenshot.png)
