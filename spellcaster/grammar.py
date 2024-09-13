@@ -5,7 +5,7 @@ from rich.table import Table
 from rich.box import ROUNDED
 import litellm
 from agentops import record_action
-from config import MODEL
+from .config import MODEL
 
 
 class Error(BaseModel):
@@ -73,7 +73,7 @@ def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Gram
     resp = litellm.completion(
         model=model,
         response_format={"type": "json_object"},
-        num_retries=199990,
+        num_retries=5,
         messages=[
             {
                 "role": "system",
@@ -111,7 +111,8 @@ def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Gram
         return Grammar(spelling=[], punctuation=[], grammar=[], file_path=file_path)
 
 
-@record_action("validate_reasoning")
+# @record_action("validate_reasoning")
+@observe()
 def validate_reasoning(text: str, model: str = MODEL) -> bool:
     """Validate the reasoning of the provided text."""
     resp = litellm.completion(
