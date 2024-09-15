@@ -78,7 +78,7 @@ To run Spellcaster:
    - `-d`, `--directory`: The directory to scan
    - `-u`, `--url`: The GitHub repository URL to clone and scan
    - `-l`, `--llm_provider`: The LLM provider to use (choices: claude, sonnet, 3.5, gpt4o, gpt4, gpt3.5; default: MODEL from config)
-   - `-p`, `--proper_nouns`: A string of proper nouns to include in the prompt (default: "* Llama3.1-70B \n * Cerebras \n * Cohere \n * OpenAI \n * AgentOps \n * Spellcaster")
+   - `-p`, `--proper_nouns`: A string of proper nouns to include in the prompt (default: "* Llama3.1-70B\n* Cerebras\n* Cohere\n* OpenAI\n* AgentOps\n* Spellcaster")
    - `-f`, `--file_types`: File types to scan (default: from FILE_TYPES in config)
    - `-m`, `--max_files`: Maximum number of files to scan (default: MAX_FILES from config)
 
