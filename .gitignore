@@ -166,4 +166,5 @@ cython_debug/
 # other
 .DS_Store
 
+./output.txt
 output.txt

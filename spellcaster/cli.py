@@ -47,8 +47,9 @@ def main():
                         )
 
     args = parser.parse_args()
-
+    path = ""
     if args.url:
+        path = args.url
         current_dir = Path.cwd()
         repo_name = args.url.rstrip('/').split("/")[-1].replace(".git", "")
         org = args.url.rstrip('/').split("/")[-2]
@@ -63,6 +64,7 @@ def main():
             clone_repository(args.url, str(directory))
             print(f"Repository cloned successfully to {directory}")
     elif args.directory:
+        path = args.directory
         directory = args.directory
         print(f"Using existing directory: {directory}")
     else:
@@ -92,7 +94,7 @@ def main():
 
     total = 0
     for result in results:
-        errors = display_results(result, args.url)
+        errors = display_results(result, result.file_path, args.url)
         total += errors
 
     console.print(f"[bold red]Total errors in the docs found: {total}[/bold red]")
