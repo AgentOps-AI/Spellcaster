@@ -19,7 +19,6 @@ class Grammar(BaseModel):
     spelling: list[Error]
     punctuation: list[Error]
     grammar: list[Error]
-    # corrected: str
     file_path: str
 
 
@@ -92,9 +91,7 @@ def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Gram
         text_response = resp.choices[0].message.content
         resp = Grammar.model_validate_json(text_response)
 
-        # Double check step
-        console.print("[bold blue]Double check step[/bold blue]")
-
+        # Double check reasoning
         validated_response = validate_reasoning(resp.json(), model=model)
 
         if validated_response is False:

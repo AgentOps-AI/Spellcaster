@@ -47,36 +47,33 @@ def main():
                         )
 
     args = parser.parse_args()
-    path = ""
     if args.url:
-        path = args.url
         current_dir = Path.cwd()
         repo_name = args.url.rstrip('/').split("/")[-1].replace(".git", "")
         org = args.url.rstrip('/').split("/")[-2]
-        print(repo_name)
+        console.print(f"[bold cyan]Repository:[/bold cyan] {repo_name}")
         directory = current_dir / "spellcaster" / "samples" / org / repo_name
-        print(f"Using directory: {directory}")
+        console.print(f"[bold green]Using directory:[/bold green] {directory}")
         if directory.exists():
-            print(f"Repository already exists at {directory}")
+            console.print(f"[bold yellow]Repository already exists at[/bold yellow] {directory}")
         else:
-            print(f"Cloning repository from {args.url}...")
+            console.print(f"[bold blue]Cloning repository from[/bold blue] {args.url}...")
             directory.mkdir(parents=True, exist_ok=True)  # Ensure the directory is created
             clone_repository(args.url, str(directory))
-            print(f"Repository cloned successfully to {directory}")
+            console.print(f"[bold green]Repository cloned successfully to[/bold green] {directory}")
     elif args.directory:
-        path = args.directory
         directory = args.directory
-        print(f"Using existing directory: {directory}")
+        console.print(f"[bold green]Using existing directory:[/bold green] {directory}")
     else:
-        parser.error("Either --directory or --url must be provided")
+        parser.error("[bold red]Either --directory or --url must be provided[/bold red]")
 
     llm_provider = args.llm_provider
-    print(f"Using LLM provider: {llm_provider}")
+    console.print(f"[bold magenta]Using LLM provider:[/bold magenta] {llm_provider}")
 
     file_paths = get_file_paths(directory, args.file_types, args.max_files)
-    print(f"Found {len(file_paths)} files to scan")
+    console.print(f"[bold cyan]Found {len(file_paths)} files to scan[/bold cyan]")
 
-    print("Starting grammar check...")
+    console.print("[bold green]Starting grammar check...[/bold green]")
 
     agentops.init(os.environ.get("AGENTOPS_API_KEY"), default_tags=["spellcaster", 'cursor', 'Cerebras', 'gpt4o'])
     results = []
@@ -100,7 +97,7 @@ def main():
 
     console.print(f"[bold red]Total errors in the docs found: {total}[/bold red]")
 
-    print("Grammar check completed.")
+    console.print("[bold green]Grammar check completed.[/bold green]")
     agentops.end_session("Success")
 
 
