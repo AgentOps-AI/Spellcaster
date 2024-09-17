@@ -22,10 +22,9 @@ dependencies = [
     "litellm==1.44.22",
     "python-dotenv",
     "rich",
-    "anthropic",
-    "groq",
     "GitPython",
-    "tenacity"
+    "tenacity",
+    "pydantic==2.9.1"
 ]
 
 [project.urls]

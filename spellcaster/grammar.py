@@ -106,7 +106,7 @@ def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Gram
 
         return resp
     except Exception as e:
-        print(f"Error: {e}")
+        console.print(f"[bold yellow]Warning: No corrections found or unable to format LLM response.[/bold yellow]")
         action_event = ActionEvent()
         record(ErrorEvent(exception=e, trigger_event=action_event))
         return Grammar(spelling=[], punctuation=[], grammar=[], file_path=file_path)
