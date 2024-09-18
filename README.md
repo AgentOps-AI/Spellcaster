@@ -26,6 +26,8 @@ Spellcaster is an open-source CLI tool that uses AI to improve your codebase's d
 
 Spellcaster helps identify potential problems to help you write clear, concise, and professional documentation.
 
+https://github.com/AgentOps-AI/Spellcaster/blob/master/assets/demo.mp4
+
 
 To run Spellcaster:
 ```bash
@@ -102,4 +104,4 @@ You can customize Spellcaster's behavior by adjusting the `config.py` file:
 
 - `FILE_TYPES`: A list of file extensions to scan. By default, it includes `.mdx` and `.md` files. You can add or remove file extensions as needed.
 - `MAX_FILES`: The maximum number of files to scan. By default, it's set to 500. You can change this number to suit your needs.
-- `MODEL`: The default LLM provider to use.
+- `MODEL`: The default LLM provider to use. Model list available [here](https://models.litellm.ai).
