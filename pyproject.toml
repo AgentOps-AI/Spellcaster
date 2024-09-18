@@ -17,9 +17,9 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "agentops==0.3.10",
+    "agentops>=0.3.11",
     "tokencost==0.1.12",
-    "litellm==1.44.22",
+    "litellm>=1.44.23",
     "python-dotenv",
     "rich",
     "GitPython",
@@ -29,7 +29,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/areibman/spellcaster"
-Issues = "https://github.com/areibman/spellcater/issues"
+Issues = "https://github.com/areibman/spellcaster/issues"
 
 [tool.autopep8]
 max_line_length = 120

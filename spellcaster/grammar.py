@@ -72,13 +72,14 @@ def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Gram
 
     resp = litellm.completion(
         model=model,
-        response_format={"type": "json_object"},
+        # response_format={"type": "json_object"},
         num_retries=5,
         messages=[
             {
                 "role": "system",
                 "content": "You are a spellchecker database that outputs grammars errors and corrected text in JSON.\n"
-                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}"
+                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}\n"
+                "It is strictly imperative that you return as JSON. DO NOT return any other characters other than valid JSON as your response."
             },
             {
                 "role": "user",
@@ -114,8 +115,8 @@ def validate_reasoning(text: str, model: str = MODEL) -> bool:
     """Validate the reasoning of the provided text."""
     resp = litellm.completion(
         model=model,
-        response_format={"type": "json_object"},
-        num_retries=50,
+        # response_format={"type": "json_object"},
+        num_retries=5,
         messages=[
             {
                 "role": "system",
@@ -178,7 +179,8 @@ def validate_reasoning(text: str, model: str = MODEL) -> bool:
                 **INVALID**    
                 
                 """
-                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}. Filter out the content that is INVALID."
+                f" The JSON object must use the schema: {json.dumps(Grammar.model_json_schema(), indent=2)}. Filter out the content that is INVALID.\n"
+                "It is strictly imperative that you return as JSON. DO NOT return any other characters other than valid JSON as your response."
             },
             {
                 "role": "user",
@@ -227,7 +229,7 @@ def display_results(response: Grammar, path: str, repo_link: str = ""):
 
     console.print(f"[bold red]Total errors found: {total_errors}[/bold red]")
 
-    with open("output.txt", "a") as f:
+    with open("output.txt", "w") as f:
         f.write(console.export_text())
 
     return total_errors

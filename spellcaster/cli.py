@@ -27,7 +27,6 @@ def main():
     parser.add_argument("-l", "--llm_provider",
                         type=str,
                         default=MODEL,
-                        choices=["claude", "sonnet", "3.5", "gpt4o", "gpt4", "gpt3.5"],
                         help="The LLM provider to use (optional)",
                         )
     parser.add_argument("-p", "--proper_nouns",
