@@ -1,6 +1,5 @@
 import argparse
 import agentops
-from spellcaster.config import FILE_TYPES, MAX_FILES, MODEL
 from spellcaster.traverse_repo import get_file_paths
 from spellcaster.grammar import check_grammar, display_results
 from spellcaster.github import clone_repository
@@ -26,7 +25,7 @@ def main():
                         type=str, help="The GitHub repository URL to clone and scan")
     parser.add_argument("-l", "--llm_provider",
                         type=str,
-                        default=MODEL,
+                        default='gpt-4o-mini',
                         help="The LLM provider to use (optional)",
                         )
     parser.add_argument("-p", "--proper_nouns",
@@ -36,12 +35,12 @@ def main():
                         )
     parser.add_argument("-f", "--file_types",
                         nargs="+",
-                        default=FILE_TYPES,
+                        default=[".mdx", ".md"],
                         help="File types to scan (default: %(default)s)",
                         )
     parser.add_argument("-m", "--max_files",
                         type=int,
-                        default=MAX_FILES,
+                        default=50,
                         help="Maximum number of files to scan (default: %(default)s)",
                         )
 

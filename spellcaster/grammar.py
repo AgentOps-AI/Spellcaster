@@ -5,7 +5,6 @@ from rich.table import Table
 from rich.box import ROUNDED
 import litellm
 from agentops import record_action
-from .config import MODEL
 from agentops import ErrorEvent, record, ActionEvent
 
 
@@ -66,7 +65,7 @@ def create_prompt(text: str, proper_nouns: str) -> str:
 
 
 @record_action("check_grammar")
-def check_grammar(file_path: str, proper_nouns: str, model: str = MODEL) -> Grammar:
+def check_grammar(file_path: str, proper_nouns: str, model: str) -> Grammar:
     """Check grammar of the text in the provided file using Claude."""
     text = read_file(file_path)
 
