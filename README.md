@@ -26,7 +26,8 @@ Spellcaster is an open-source CLI tool that uses AI to improve your codebase's d
 
 Spellcaster helps identify potential problems to help you write clear, concise, and professional documentation.
 
-https://github.com/AgentOps-AI/Spellcaster/blob/5ec895a0ef9267387bc3ff2ed9e48cbfb3fdfcb7/assets/demo.mp4
+
+https://github.com/user-attachments/assets/60dbfdb1-d5a6-4dfd-9707-37e60d60b24e
 
 
 To run Spellcaster:
