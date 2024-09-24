@@ -203,7 +203,7 @@ def display_results(response: Grammar, path: str, repo_link: str = ""):
         parts = os.path.normpath(response.file_path).split(os.path.sep)
         if "samples" in parts:
             index = parts.index("samples")
-            relative_path = os.path.sep.join(parts[index+1:])
+            relative_path = os.path.join(*parts[index+1:])
             path = f"{repo_link.rstrip('/')}/blob/main/{relative_path}"
         else:
             # Fallback if 'samples' is not in the path
