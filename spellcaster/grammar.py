@@ -1,3 +1,4 @@
+import os
 import json
 from pydantic import BaseModel
 from rich.console import Console
@@ -198,8 +199,16 @@ def display_results(response: Grammar, path: str, repo_link: str = ""):
     """Display the grammar check results using Rich."""
     # Replace local file path with GitHub URL
     if repo_link:
-        path = repo_link.rstrip('/') + '/blob/main/' + \
-            '/'.join(response.file_path.split("samples/")[1].split('/')[2:])
+        # Use os.path.split to handle path separators correctly
+        parts = os.path.normpath(response.file_path).split(os.path.sep)
+        if "samples" in parts:
+            index = parts.index("samples")
+            relative_path = os.path.sep.join(parts[index+1:])
+            path = f"{repo_link.rstrip('/')}/blob/main/{relative_path}"
+        else:
+            # Fallback if 'samples' is not in the path
+            path = f"{repo_link.rstrip('/')}/blob/main/{os.path.basename(response.file_path)}"
+
     # Create a console for file output
     console = Console(record=True)
 
